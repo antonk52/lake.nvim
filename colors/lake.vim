@@ -206,6 +206,7 @@ call <sid>hi("TabLineSel",    "0B", "01", "0B", "01", "none", "")
 " TODO
 " - [ ] yellow type keyword
 " - [ ] red semicolons
+" - [ ] yellow xml attributes
 call <sid>hi("Boolean",      "09", "", "09", "", "", "")
 call <sid>hi("Character",    "08", "", "08", "", "", "")
 call <sid>hi("Comment",      "03", "", "03", "", "", "")
@@ -352,8 +353,8 @@ call <sid>hi("TSMethod",             "05", "", "05", "", "", "")
 call <sid>hi("TSNamespace",          "05", "", "05", "", "", "")
 call <sid>hi("TSException",          "0C", "", "0C", "", "", "")
 call <sid>hi("TSInclude",            "0E", "", "0E", "", "", "")
-call <sid>hi("TSTag",                "0C", "", "0C", "", "", "")
-call <sid>hi("TSTagDelimiter",       "0C", "", "0C", "", "", "")
+call <sid>hi("TSTag",                "0D", "", "0D", "", "", "")
+call <sid>hi("TSTagDelimiter",       "0D", "", "0D", "", "", "")
 call <sid>hi("TSStatement",          "0A", "", "0A", "", "", "")
 call <sid>hi("TSError",              "08", "", "08", "", "", "")
 " }}}

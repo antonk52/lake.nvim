@@ -7,4 +7,4 @@ A simplified version of the ocean color scheme and  with support for [treesitter
 ## Acknowledgments
 
 - Initially started as a fork of ocean theme from [base16 project](https://github.com/chriskempson/base16-vim)
-- Heavify inspired by [spacegray](https://kkga.github.io/spacegray/) sublime text theme
+- Heavily inspired by [spacegray](https://kkga.github.io/spacegray/) sublime text theme
