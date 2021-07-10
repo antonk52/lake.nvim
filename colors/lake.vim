@@ -1,7 +1,7 @@
 " vi: foldmethod=marker foldlevelstart=1
 " syntax=vim
 
-" GUI color definitions {{{
+" GUI color definitions {{{1
 let s:palette = {
     \ "00": {"gui": "#2b303b", "cterm": "00", "name": "Gray"      },
     \ "01": {"gui": "#343d46", "cterm": "01", "name": "Gray"      },
@@ -20,9 +20,8 @@ let s:palette = {
     \ "0E": {"gui": "#b48ead", "cterm": "0E", "name": "Violet"    },
     \ "0F": {"gui": "#ab7967", "cterm": "0F", "name": "Orange"    }
 \ }
-" }}}
 
-" Terminal color definitions {{{
+" Terminal color definitions {{{1
 let s:cterm00        = "00"
 let g:lake_cterm00 = "00"
 let s:cterm03        = "08"
@@ -70,9 +69,8 @@ else
     let s:cterm0F        = "14"
     let g:lake_cterm0F = "14"
 endif
-" }}}
 
-" Terminal colours {{{
+" Terminal colours {{{1
 if has("nvim")
     let g:terminal_color_0 =  "#2b303b"
     let g:terminal_color_1 =  "#bf616a"
@@ -116,15 +114,13 @@ elseif has("terminal")
         \ "#eff1f5",
         \ ]
 endif
-" }}}
 
-" Theme setup {{{
+" Theme setup {{{1
 hi clear
 syntax reset
 let g:colors_name = "lake"
-" }}}
 
-" Highlighting function {{{
+" Highlighting function {{{1
 " Optional variables are attributes and guisp
 function! LakeHi(group, guifg, guibg, ctermfg, ctermbg, ...)
     let l:attr = get(a:, 1, "")
@@ -149,13 +145,12 @@ function! LakeHi(group, guifg, guibg, ctermfg, ctermbg, ...)
         exec "hi " . a:group . " guisp=" . l:guisp
     endif
 endfunction
-" }}}
 
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
   call LakeHi(a:group, a:guifg, a:guibg, a:ctermfg, a:ctermbg, a:attr, a:guisp)
 endfun
 
-" Vim editor colors {{{
+" Vim editor colors {{{1
 call <sid>hi("Normal",        "05", "00", "05", "00", "", "")
 call <sid>hi("Bold",          "", "", "", "", "bold", "")
 call <sid>hi("Debug",         "08", "", "08", "", "", "")
@@ -200,9 +195,8 @@ call <sid>hi("PMenuSel",      "01", "05", "01", "05", "", "")
 call <sid>hi("TabLine",       "03", "01", "03", "01", "none", "")
 call <sid>hi("TabLineFill",   "03", "01", "03", "01", "none", "")
 call <sid>hi("TabLineSel",    "0B", "01", "0B", "01", "none", "")
-" }}}
 
-" Standard syntax highlighting {{{
+" Standard syntax highlighting {{{1
 " TODO
 " - [ ] yellow type keyword
 " - [ ] red semicolons
@@ -234,14 +228,12 @@ call <sid>hi("Tag",          "0A", "", "0A", "", "", "")
 call <sid>hi("Todo",         "0A", "01", "0A", "01", "", "")
 call <sid>hi("Type",         "0A", "", "0A", "", "none", "")
 call <sid>hi("Typedef",      "0A", "", "0A", "", "", "")
-" }}}
 
-" C highlighting {{{
+" C highlighting {{{1
 call <sid>hi("cOperator",   "0C", "", "0C", "", "", "")
 call <sid>hi("cPreCondit",  "0E", "", "0E", "", "", "")
-" }}}
 
-" C# highlighting {{{
+" C# highlighting {{{1
 call <sid>hi("csClass",                 "0A", "", "0A", "", "", "")
 call <sid>hi("csAttribute",             "0A", "", "0A", "", "", "")
 call <sid>hi("csModifier",              "0E", "", "0E", "", "", "")
@@ -249,15 +241,13 @@ call <sid>hi("csType",                  "08", "", "08", "", "", "")
 call <sid>hi("csUnspecifiedStatement",  "0D", "", "0D", "", "", "")
 call <sid>hi("csContextualStatement",   "0E", "", "0E", "", "", "")
 call <sid>hi("csNewDecleration",        "08", "", "08", "", "", "")
-" }}}
 
-" CSS highlighting {{{
+" CSS highlighting {{{1
 call <sid>hi("cssBraces",      "05", "", "05", "", "", "")
 call <sid>hi("cssClassName",   "0E", "", "0E", "", "", "")
 call <sid>hi("cssColor",       "0C", "", "0C", "", "", "")
-" }}}
 
-" Diff highlighting {{{
+" Diff highlighting {{{1
 call <sid>hi("DiffAdd",      "0B", "01",  "0B", "01", "", "")
 call <sid>hi("DiffChange",   "03", "01",  "03", "01", "", "")
 call <sid>hi("DiffDelete",   "08", "01",  "08", "01", "", "")
@@ -267,9 +257,8 @@ call <sid>hi("DiffFile",     "08", "00",  "08", "00", "", "")
 call <sid>hi("DiffNewFile",  "0B", "00",  "0B", "00", "", "")
 call <sid>hi("DiffLine",     "0D", "00",  "0D", "00", "", "")
 call <sid>hi("DiffRemoved",  "08", "00",  "08", "00", "", "")
-" }}}
 
-" Git highlighting {{{
+" Git highlighting {{{1
 call <sid>hi("gitcommitOverflow",       "08", "", "08", "", "", "")
 call <sid>hi("gitcommitSummary",        "0B", "", "0B", "", "", "")
 call <sid>hi("gitcommitComment",        "03", "", "03", "", "", "")
@@ -285,23 +274,20 @@ call <sid>hi("gitcommitUntrackedFile",  "0A", "", "0A", "", "", "")
 call <sid>hi("gitcommitUnmergedFile",   "08", "", "08", "", "bold", "")
 call <sid>hi("gitcommitDiscardedFile",  "08", "", "08", "", "bold", "")
 call <sid>hi("gitcommitSelectedFile",   "0B", "", "0B", "", "bold", "")
-" }}}
 
-" GitGutter highlighting {{{
+" GitGutter highlighting {{{1
 call <sid>hi("GitGutterAdd",     "0B", "01", "0B", "01", "", "")
 call <sid>hi("GitGutterChange",  "0D", "01", "0D", "01", "", "")
 call <sid>hi("GitGutterDelete",  "08", "01", "08", "01", "", "")
 call <sid>hi("GitGutterChangeDelete",  "0E", "01", "0E", "01", "", "")
-" }}}
 
-" HTML highlighting {{{
+" HTML highlighting {{{1
 call <sid>hi("htmlBold",    "0A", "", "0A", "", "", "")
 call <sid>hi("htmlItalic",  "0E", "", "0E", "", "", "")
 call <sid>hi("htmlEndTag",  "05", "", "05", "", "", "")
 call <sid>hi("htmlTag",     "05", "", "05", "", "", "")
-" }}}
 
-" JavaScript highlighting {{{
+" JavaScript highlighting {{{1
 call <sid>hi("javaScript",        "05", "", "05", "", "", "")
 call <sid>hi("javaScriptBraces",  "05", "", "05", "", "", "")
 call <sid>hi("javaScriptNumber",  "09", "", "09", "", "", "")
@@ -321,9 +307,8 @@ call <sid>hi("jsGlobalObjects",     "0A", "", "0A", "", "", "")
 call <sid>hi("jsGlobalNodeObjects", "0A", "", "0A", "", "", "")
 call <sid>hi("jsExceptions",        "0A", "", "0A", "", "", "")
 call <sid>hi("jsBuiltins",          "0A", "", "0A", "", "", "")
-" }}}
 
-" treesitter {{{
+" treesitter {{{1
 call <sid>hi("TSFunction",           "05", "", "05", "", "none", "")
 call <sid>hi("TSConstant",           "05", "", "05", "", "none", "")
 call <sid>hi("TSConstructor",        "05", "", "05", "", "none", "")
@@ -357,13 +342,12 @@ call <sid>hi("TSTag",                "0D", "", "0D", "", "", "")
 call <sid>hi("TSTagDelimiter",       "0D", "", "0D", "", "", "")
 call <sid>hi("TSStatement",          "0A", "", "0A", "", "", "")
 call <sid>hi("TSError",              "08", "", "08", "", "", "")
-" }}}
 
 " Typescript highlighting based on vim-typescript
 " TODO why color not appliying not appliying
 call <sid>hi("typescriptStorageClass", "0A", "", "0A", "", "", "")
 
-" Mail highlighting {{{
+" Mail highlighting {{{1
 call <sid>hi("mailQuoted1",  "0A", "", "0A", "", "", "")
 call <sid>hi("mailQuoted2",  "0B", "", "0B", "", "", "")
 call <sid>hi("mailQuoted3",  "0E", "", "0E", "", "", "")
@@ -372,65 +356,56 @@ call <sid>hi("mailQuoted5",  "0D", "", "0D", "", "", "")
 call <sid>hi("mailQuoted6",  "0A", "", "0A", "", "", "")
 call <sid>hi("mailURL",      "0D", "", "0D", "", "", "")
 call <sid>hi("mailEmail",    "0D", "", "0D", "", "", "")
-" }}}
 
-" Markdown highlighting {{{
+" Markdown highlighting {{{1
 call <sid>hi("markdownCode",              "0B", "", "0B", "", "", "")
 call <sid>hi("markdownError",             "05", "00", "05", "00", "", "")
 call <sid>hi("markdownCodeBlock",         "0B", "", "0B", "", "", "")
 call <sid>hi("markdownHeadingDelimiter",  "0D", "", "0D", "", "", "")
-" }}}
 
-" NERDTree highlighting {{{
+" NERDTree highlighting {{{1
 call <sid>hi("NERDTreeDirSlash",  "0D", "", "0D", "", "", "")
 call <sid>hi("NERDTreeExecFile",  "05", "", "05", "", "", "")
-" }}}
 
-" PHP highlighting {{{
+" PHP highlighting {{{1
 call <sid>hi("phpMemberSelector",  "05", "", "05", "", "", "")
 call <sid>hi("phpComparison",      "05", "", "05", "", "", "")
 call <sid>hi("phpParent",          "05", "", "05", "", "", "")
 call <sid>hi("phpMethodsVar",      "0C", "", "0C", "", "", "")
-" }}}
 
-" Python highlighting {{{
+" Python highlighting {{{1
 call <sid>hi("pythonOperator",  "0E", "", "0E", "", "", "")
 call <sid>hi("pythonRepeat",    "0E", "", "0E", "", "", "")
 call <sid>hi("pythonInclude",   "0E", "", "0E", "", "", "")
 call <sid>hi("pythonStatement", "0E", "", "0E", "", "", "")
-" }}}
 
-" Ruby highlighting {{{
+" Ruby highlighting {{{1
 call <sid>hi("rubyAttribute",               "0D", "", "0D", "", "", "")
 call <sid>hi("rubyConstant",                "0A", "", "0A", "", "", "")
 call <sid>hi("rubyInterpolationDelimiter",  "0F", "", "0F", "", "", "")
 call <sid>hi("rubyRegexp",                  "0C", "", "0C", "", "", "")
 call <sid>hi("rubySymbol",                  "0B", "", "0B", "", "", "")
 call <sid>hi("rubyStringDelimiter",         "0B", "", "0B", "", "", "")
-" }}}
 
-" SASS highlighting {{{
+" SASS highlighting {{{1
 call <sid>hi("sassidChar",     "08", "", "08", "", "", "")
 call <sid>hi("sassClassChar",  "09", "", "09", "", "", "")
 call <sid>hi("sassInclude",    "0E", "", "0E", "", "", "")
 call <sid>hi("sassMixing",     "0E", "", "0E", "", "", "")
 call <sid>hi("sassMixinName",  "0D", "", "0D", "", "", "")
-" }}}
 
-" Signify highlighting {{{
+" Signify highlighting {{{1
 call <sid>hi("SignifySignAdd",     "0B", "01", "0B", "01", "", "")
 call <sid>hi("SignifySignChange",  "0D", "01", "0D", "01", "", "")
 call <sid>hi("SignifySignDelete",  "08", "01", "08", "01", "", "")
-" }}}
 
-" Spelling highlighting {{{
+" Spelling highlighting {{{1
 call <sid>hi("SpellBad",     "", "", "", "", "undercurl", "08")
 call <sid>hi("SpellLocal",   "", "", "", "", "undercurl", "0C")
 call <sid>hi("SpellCap",     "", "", "", "", "undercurl", "0D")
 call <sid>hi("SpellRare",    "", "", "", "", "undercurl", "0E")
-" }}}
 
-" Startify highlighting {{{
+" Startify highlighting {{{1
 call <sid>hi("StartifyBracket",  "03", "", "03", "", "", "")
 call <sid>hi("StartifyFile",     "07", "", "07", "", "", "")
 call <sid>hi("StartifyFooter",   "03", "", "03", "", "", "")
@@ -441,15 +416,13 @@ call <sid>hi("StartifySection",  "0E", "", "0E", "", "", "")
 call <sid>hi("StartifySelect",   "0C", "", "0C", "", "", "")
 call <sid>hi("StartifySlash",    "03", "", "03", "", "", "")
 call <sid>hi("StartifySpecial",  "03", "", "03", "", "", "")
-" }}}
 
 " Java highlighting
 call <sid>hi("javaOperator",     "0D", "", "0D", "", "", "")
 
-" cleanup {{{
+" cleanup {{{1
 delf <sid>hi
 
 " Remove color variables
 " unlet s:gui00 s:gui01 s:gui02 s:gui03  s:gui04  s:gui05  s:gui06  s:gui07  s:gui08  s:gui09 s:gui0A  s:gui0B  s:gui0C  s:gui0D  s:gui0E  s:gui0F
 " unlet s:cterm00 s:cterm01 s:cterm02 s:cterm03 s:cterm04 s:cterm05 s:cterm06 s:cterm07 s:cterm08 s:cterm09 s:cterm0A s:cterm0B s:cterm0C s:cterm0D s:cterm0E s:cterm0F
-" }}}
