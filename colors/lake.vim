@@ -21,6 +21,8 @@ let s:palette = {
     \ "0F": {"gui": "#ab7967", "cterm": "0F", "name": "Orange"    }
 \ }
 
+let g:lake_palette = s:palette
+
 " Terminal color definitions {{{1
 let s:cterm00        = "00"
 let g:lake_cterm00 = "00"
