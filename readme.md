@@ -1,10 +1,10 @@
 # Lake.vim
 
-A simplified version of the ocean color scheme and  with support for [treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+A simplified version of the ocean color scheme with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) support.
 
 <img alt="lake.vim colorscheme" src="https://user-images.githubusercontent.com/5817809/124399388-ca25c980-dd23-11eb-8ede-361bcb5415db.png">
 
-The colors from the pallette used can be accessed via `g:lake_palette`
+Palette colors can be accessed via `g:lake_palette`
 
 ## Acknowledgments
 
