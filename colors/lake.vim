@@ -225,10 +225,10 @@ hi sassMixinName guifg=#8fa1b3 ctermfg=0D
 hi SignifySignAdd guifg=#a3be8c guibg=#343d46 ctermfg=0B ctermbg=01
 hi SignifySignChange guifg=#8fa1b3 guibg=#343d46 ctermfg=0D ctermbg=01
 hi SignifySignDelete guifg=#bf616a guibg=#343d46 ctermfg=08 ctermbg=01
-hi SpellBad gui=undercurl cterm=undercurl guisp=undefined
-hi SpellLocal gui=undercurl cterm=undercurl guisp=undefined
-hi SpellCap gui=undercurl cterm=undercurl guisp=undefined
-hi SpellRare gui=undercurl cterm=undercurl guisp=undefined
+hi SpellBad gui=undercurl cterm=undercurl guisp=08
+hi SpellLocal gui=undercurl cterm=undercurl guisp=0C
+hi SpellCap gui=undercurl cterm=undercurl guisp=0D
+hi SpellRare gui=undercurl cterm=undercurl guisp=0E
 hi StartifyBracket guifg=#65737e ctermfg=03
 hi StartifyFile guifg=#eff1f5 ctermfg=07
 hi StartifyFooter guifg=#65737e ctermfg=03

@@ -113,11 +113,15 @@ function getHighlights() {
 
 function highlightGroup(group, kind) {
     const options = Object.entries(theme[kind][group])
-        .map(([key, val]) =>
-            key === 'attr'
-                ? `gui=${val} cterm=${val}`
-                : `${key}=${getColorValue(key, val)}`,
-        )
+        .map(([key, val]) => {
+            if (key === 'attr') {
+                return `gui=${val} cterm=${val}`;
+            }
+            if (key === 'guisp') {
+                return `${key}=${val}`;
+            }
+            return `${key}=${getColorValue(key, val)}`;
+        })
         .join(' ');
 
     return `hi ${group} ${options}`;
