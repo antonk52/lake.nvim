@@ -1,3 +1,8 @@
+if (parseFloat(process.version.slice(1)) < 11) {
+    console.error('You need Node.js v11 or newer to run this script.')
+    process.exit(1);
+}
+
 const fs = require('fs');
 const path = require('path');
 
