@@ -117,9 +117,6 @@ function highlightGroup(group, kind) {
             if (key === 'attr') {
                 return `gui=${val} cterm=${val}`;
             }
-            if (key === 'guisp') {
-                return `${key}=${val}`;
-            }
             return `${key}=${getColorValue(key, val)}`;
         })
         .join(' ');
@@ -128,7 +125,9 @@ function highlightGroup(group, kind) {
 }
 
 function getColorValue(key, val) {
-    return val.length === 2 ? palette[val][key.replace(/(fg|bg)$/, '')] : val;
+    const colorKey = key === 'guisp' ? 'gui' : key.replace(/(fg|bg)$/, '');
+
+    return val in palette ? palette[val][colorKey] : val;
 }
 
 main();
