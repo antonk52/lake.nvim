@@ -459,7 +459,7 @@
         }
     },
     "Docker": {
-        "dockerfileKeywords": {
+        "dockerfileKeyword": {
             "guifg": "0E",
             "ctermfg": "0E"
         }
