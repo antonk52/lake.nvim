@@ -147,6 +147,7 @@ hi DiffFile guifg=#bf616a guibg=#2b303b ctermfg=08 ctermbg=00
 hi DiffNewFile guifg=#a3be8c guibg=#2b303b ctermfg=0B ctermbg=00
 hi DiffLine guifg=#8fa1b3 guibg=#2b303b ctermfg=0D ctermbg=00
 hi DiffRemoved guifg=#bf616a guibg=#2b303b ctermfg=08 ctermbg=00
+hi dockerfileKeywords guifg=#b48ead ctermfg=0E
 hi gitcommitOverflow guifg=#bf616a ctermfg=08
 hi gitcommitSummary guifg=#a3be8c ctermfg=0B
 hi gitcommitComment guifg=#65737e ctermfg=03

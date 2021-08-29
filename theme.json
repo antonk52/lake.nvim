@@ -458,6 +458,12 @@
             "ctermbg": "00"
         }
     },
+    "Docker": {
+        "dockerfileKeywords": {
+            "guifg": "0E",
+            "ctermfg": "0E"
+        }
+    },
     "Git": {
         "gitcommitOverflow": {
             "guifg": "08",
