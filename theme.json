@@ -271,8 +271,8 @@
             "ctermfg": "0D"
         },
         "Identifier": {
-            "guifg": "08",
-            "ctermfg": "08",
+            "guifg": "05",
+            "ctermfg": "05",
             "attr": "none"
         },
         "Include": {
@@ -646,6 +646,14 @@
         "jsBuiltins": {
             "guifg": "0A",
             "ctermfg": "0A"
+        },
+        "typescriptAliasKeyword": {
+            "guifg": "0E",
+            "ctermfg": "0E"
+        },
+        "typescriptEndColons": {
+            "guifg": "05",
+            "ctermfg": "05"
         },
         "typescriptStorageClass": {
             "guifg": "0A",

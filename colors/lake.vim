@@ -108,7 +108,7 @@ hi Define guifg=#b48ead ctermfg=0E gui=none cterm=none
 hi Delimiter guifg=#ab7967 ctermfg=0F
 hi Float guifg=#d08770 ctermfg=09
 hi Function guifg=#8fa1b3 ctermfg=0D
-hi Identifier guifg=#bf616a ctermfg=08 gui=none cterm=none
+hi Identifier guifg=#c0c5ce ctermfg=05 gui=none cterm=none
 hi Include guifg=#8fa1b3 ctermfg=0D
 hi Keyword guifg=#c0c5ce ctermfg=05
 hi Label guifg=#ebcb8b ctermfg=0A
@@ -189,6 +189,8 @@ hi jsGlobalObjects guifg=#ebcb8b ctermfg=0A
 hi jsGlobalNodeObjects guifg=#ebcb8b ctermfg=0A
 hi jsExceptions guifg=#ebcb8b ctermfg=0A
 hi jsBuiltins guifg=#ebcb8b ctermfg=0A
+hi typescriptAliasKeyword guifg=#b48ead ctermfg=0E
+hi typescriptEndColons guifg=#c0c5ce ctermfg=05
 hi typescriptStorageClass guifg=#ebcb8b ctermfg=0A
 hi mailQuoted1 guifg=#ebcb8b ctermfg=0A
 hi mailQuoted2 guifg=#a3be8c ctermfg=0B
