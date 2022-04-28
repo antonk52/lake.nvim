@@ -53,59 +53,22 @@ function getTerminalColors() {
             `let g:lake_cterm${left}="${right}"`,
         ].join('\n'),
     );
-    const terminalIndexedColors = [
-        '00',
-        '08',
-        '0B',
-        '0A',
-        '0D',
-        '0E',
-        '0C',
-        '05',
-        '03',
-        '08',
-        '0B',
-        '0A',
-        '0D',
-        '0E',
-        '0C',
-        '07',
-    ].map((key, i) => `  let g:terminal_color_${i}="${palette[key].gui}"`);
-    const terminalAnsiColors = [
-        '00',
-        '08',
-        '0B',
-        '0A',
-        '0D',
-        '0E',
-        '0C',
-        '05',
-        '03',
-        '08',
-        '0B',
-        '0A',
-        '0D',
-        '0E',
-        '0C',
-        '07',
-    ]
-        .map(x => `"${palette[x].gui}"`)
-        .join(',');
+    const colorNames = ['00', '08', '0B', '0A', '0D', '0E', '0C', '05', '03', '08', '0B', '0A', '0D', '0E', '0C', '07'];
 
     return [
         ...colorDefinitions,
 
+        // These are used by fzf terminal, see :h fzf-inside-terminal-buffer
         'if has("nvim")',
-        ...terminalIndexedColors,
+        ...colorNames.map((key, i) => `  let g:terminal_color_${i}="${palette[key].gui}"`),
         `  let g:terminal_color_background=g:terminal_color_0`,
         `  let g:terminal_color_foreground=g:terminal_color_5`,
         `  if &background == "light"`,
         `    let g:terminal_color_background=g:terminal_color_7`,
         `    let g:terminal_color_foreground=g:terminal_color_2`,
         `  endif`,
-
-        'elseif has("terminal")',
-        `  let g:terminal_ansi_colors=[${terminalAnsiColors}]`,
+        'else',
+        `  let g:terminal_ansi_colors=[${colorNames.map(x => `"${palette[x].gui}"`).join(',')}]`,
         'endif',
     ];
 }
