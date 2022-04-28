@@ -80,6 +80,7 @@ hi Visual guibg=#4f5b66 ctermbg=02
 hi VisualNOS guifg=#bf616a ctermfg=08
 hi WarningMsg guifg=#bf616a ctermfg=08
 hi WildMenu guifg=#bf616a guibg=#ebcb8b ctermfg=08
+hi WinSeparator guifg=#4f5b66 guibg=none ctermfg=02
 hi Title guifg=#8fa1b3 ctermfg=0D gui=none cterm=none
 hi Conceal guifg=#8fa1b3 guibg=#2b303b ctermfg=0D ctermbg=00
 hi Cursor guifg=#2b303b guibg=#c0c5ce ctermfg=00 ctermbg=05
