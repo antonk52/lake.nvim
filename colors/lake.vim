@@ -66,7 +66,7 @@ hi FoldColumn guifg=#96b5b4 guibg=#343d46 ctermfg=0C ctermbg=01
 hi Folded guifg=#65737e guibg=#343d46 ctermfg=03 ctermbg=01
 hi IncSearch guifg=#343d46 guibg=#d08770 ctermfg=01 ctermbg=09 gui=none cterm=none
 hi Italic gui=none cterm=none
-hi Macro guifg=#bf616a ctermfg=08
+hi Macro guifg=#c0c5ce ctermfg=05
 hi MatchParen guibg=#65737e ctermbg=03
 hi ModeMsg guifg=#a3be8c ctermfg=0B
 hi MoreMsg guifg=#a3be8c ctermfg=0B

@@ -56,8 +56,8 @@
             "attr": "none"
         },
         "Macro": {
-            "guifg": "08",
-            "ctermfg": "08"
+            "guifg": "05",
+            "ctermfg": "05"
         },
         "MatchParen": {
             "guibg": "03",
