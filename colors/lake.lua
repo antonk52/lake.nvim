@@ -476,7 +476,7 @@ local groups = {
         ["guifg"] = "0E",
         ["ctermfg"] = "0E",
     },
-    -- ["Git"]
+    -- Git
     ["gitcommitOverflow"] = {
         ["guifg"] = "08",
         ["ctermfg"] = "08",
@@ -541,7 +541,7 @@ local groups = {
         ["ctermfg"] = "0B",
         ["attr"] = "bold",
     },
-    -- ["GitGutter"]
+    -- GitGutter
     ["GitGutterAdd"] = {
         ["guifg"] = "0B",
         ["guibg"] = "01",
@@ -566,7 +566,7 @@ local groups = {
         ["ctermfg"] = "0E",
         ["ctermbg"] = "01",
     },
-    -- ["HTML"]
+    -- HTML
     ["htmlBold"] = {
         ["guifg"] = "0A",
         ["ctermfg"] = "0A",
@@ -583,7 +583,7 @@ local groups = {
         ["guifg"] = "05",
         ["ctermfg"] = "05",
     },
-    -- ["JavaScript"]
+    -- JavaScript
     ["javaScript"] = {
         ["guifg"] = "05",
         ["ctermfg"] = "05",
@@ -668,7 +668,7 @@ local groups = {
         ["guifg"] = "0A",
         ["ctermfg"] = "0A",
     },
-    -- ["Mail"]
+    -- Mail
     ["mailQuoted1"] = {
         ["guifg"] = "0A",
         ["ctermfg"] = "0A",
@@ -701,7 +701,7 @@ local groups = {
         ["guifg"] = "0D",
         ["ctermfg"] = "0D",
     },
-    -- ["Markdown"]
+    -- Markdown
     ["markdownCode"] = {
         ["guifg"] = "0B",
         ["ctermfg"] = "0B",
@@ -720,7 +720,7 @@ local groups = {
         ["guifg"] = "0D",
         ["ctermfg"] = "0D",
     },
-    -- ["NERDTree"]
+    -- NERDTree
     ["NERDTreeDirSlash"] = {
         ["guifg"] = "0D",
         ["ctermfg"] = "0D",
@@ -729,7 +729,7 @@ local groups = {
         ["guifg"] = "05",
         ["ctermfg"] = "05",
     },
-    -- ["PHP"]
+    -- PHP
     ["phpMemberSelector"] = {
         ["guifg"] = "05",
         ["ctermfg"] = "05",
@@ -746,7 +746,7 @@ local groups = {
         ["guifg"] = "0C",
         ["ctermfg"] = "0C",
     },
-    -- ["Python"]
+    -- Python
     ["pythonOperator"] = {
         ["guifg"] = "0E",
         ["ctermfg"] = "0E",
@@ -763,7 +763,7 @@ local groups = {
         ["guifg"] = "0E",
         ["ctermfg"] = "0E",
     },
-    -- ["Ruby"]
+    -- Ruby
     ["rubyAttribute"] = {
         ["guifg"] = "0D",
         ["ctermfg"] = "0D",
@@ -788,7 +788,7 @@ local groups = {
         ["guifg"] = "0B",
         ["ctermfg"] = "0B",
     },
-    -- ["SASS"]
+    -- SASS
     ["sassidChar"] = {
         ["guifg"] = "08",
         ["ctermfg"] = "08",
@@ -809,7 +809,7 @@ local groups = {
         ["guifg"] = "0D",
         ["ctermfg"] = "0D",
     },
-    -- ["Signify"]
+    -- Signify
     ["SignifySignAdd"] = {
         ["guifg"] = "0B",
         ["guibg"] = "01",
@@ -828,7 +828,7 @@ local groups = {
         ["ctermfg"] = "08",
         ["ctermbg"] = "01",
     },
-    -- ["Spelling"] = {,
+    -- Spelling
     ["SpellBad"] = {
         ["attr"] = "undercurl",
         ["guisp"] = "08",
@@ -845,7 +845,7 @@ local groups = {
         ["attr"] = "undercurl",
         ["guisp"] = "0E",
     },
-    -- ["Startify"]
+    -- Startify
     ["StartifyBracket"] = {
         ["guifg"] = "03",
         ["ctermfg"] = "03",
@@ -890,7 +890,7 @@ local groups = {
         ["guifg"] = "0D",
         ["ctermfg"] = "0D",
     },
-    -- ["Treesitter"]
+    -- Treesitter
     ["TSFunction"] = {
         ["guifg"] = "05",
         ["ctermfg"] = "05",
@@ -1028,6 +1028,41 @@ local groups = {
         ["guifg"] = "08",
         ["ctermfg"] = "08",
     },
+    -- Treesitter 0.8 or newer
+    ["@function"] = {link = "TSFunction"},
+    ["@constant"] = {link = "TSConstant"},
+    ["@constructor"] = {link = "TSConstructor"},
+    ["@conditional"] = {link = "TSConditional"},
+    ["@number"] = {link = "TSNumber"},
+    ["@operator"] = {link = "TSOperator"},
+    ["@parameter"] = {link = "TSParameter"},
+    ["@parameter.reference"] = {link = "TSParameterReference"},
+    ["@property"] = {link = "TSProperty"},
+    ["@field"] = {link = "TSField"},
+    ["@punctuation.delimiter"] = {link = "TSPunctDelimiter"},
+    ["@punctuation.bracket"] = {link = "TSPunctBracket"},
+    ["@punctuation.special"] = {link = "TSPunctSpecial"},
+    ["@repeat"] = {link = "TSRepeat"},
+    ["@string"] = {link = "TSString"},
+    ["@type"] = {link = "TSType"},
+    ["@type.builtin"] = {link = "TSTypeBuiltin"},
+    ["@variable"] = {link = "TSVariable"},
+    ["@variable.builtin"] = {link = "TSVariableBuiltin"},
+    ["@float"] = {link = "TSFloat"},
+    ["@keyword"] = {link = "TSKeyword"},
+    ["@keyword.operator"] = {link = "TSKeywordOperator"},
+    ["@keyword.function"] = {link = "TSKeywordFunction"},
+    ["@keyword.return"] = {link = "TSKeywordReturn"},
+    ["@method"] = {link = "TSMethod"},
+    ["@namespace"] = {link = "TSNamespace"},
+    ["@exception"] = {link = "TSException"},
+    ["@include"] = {link = "TSInclude"},
+    ["@tag"] = {link = "TSTag"},
+    ["@tag.custom"] = {link = "TSTagCustom"},
+    ["@tag.delimiter"] = {link = "TSTagDelimiter"},
+    ["@tag.attribute"] = {link = "TSTagAttribute"},
+    ["@statement"] = {link = "TSStatement"},
+    ["@error"] = {link = "TSError"},
 }
 
 for group, settings in pairs(groups) do
@@ -1043,6 +1078,9 @@ for group, settings in pairs(groups) do
     end
     if settings.attr == 'undercurl' then
         opts.undercurl = true
+    end
+    if settings.link then
+        opts.link = settings.link
     end
     vim.api.nvim_set_hl(0, group, opts)
 end
