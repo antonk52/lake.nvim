@@ -635,189 +635,145 @@ local groups = {
     },
     -- Startify
     ["StartifyBracket"] = {
-        ["guifg"] = "03",
-        ["ctermfg"] = "03",
+        ["fg"] = "03",
     },
     ["StartifyFile"] = {
-        ["guifg"] = "07",
-        ["ctermfg"] = "07",
+        ["fg"] = "07",
     },
     ["StartifyFooter"] = {
-        ["guifg"] = "03",
-        ["ctermfg"] = "03",
+        ["fg"] = "03",
     },
     ["StartifyHeader"] = {
-        ["guifg"] = "0B",
-        ["ctermfg"] = "0B",
+        ["fg"] = "0B",
     },
     ["StartifyNumber"] = {
-        ["guifg"] = "09",
-        ["ctermfg"] = "09",
+        ["fg"] = "09",
     },
     ["StartifyPath"] = {
-        ["guifg"] = "03",
-        ["ctermfg"] = "03",
+        ["fg"] = "03",
     },
     ["StartifySection"] = {
-        ["guifg"] = "0E",
-        ["ctermfg"] = "0E",
+        ["fg"] = "0E",
     },
     ["StartifySelect"] = {
-        ["guifg"] = "0C",
-        ["ctermfg"] = "0C",
+        ["fg"] = "0C",
     },
     ["StartifySlash"] = {
-        ["guifg"] = "03",
-        ["ctermfg"] = "03",
+        ["fg"] = "03",
     },
     ["StartifySpecial"] = {
-        ["guifg"] = "03",
-        ["ctermfg"] = "03",
+        ["fg"] = "03",
     },
     ["javaOperator"] = {
-        ["guifg"] = "0D",
-        ["ctermfg"] = "0D",
+        ["fg"] = "0D",
     },
     -- Treesitter
     ["TSFunction"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSConstant"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSConstructor"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSConditional"] = {
-        ["guifg"] = "0E",
-        ["ctermfg"] = "0E",
+        ["fg"] = "0E",
     },
     ["TSNumber"] = {
-        ["guifg"] = "09",
-        ["ctermfg"] = "09",
+        ["fg"] = "09",
     },
     ["TSOperator"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSParameter"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSParameterReference"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSProperty"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSField"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSPunctDelimiter"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSPunctBracket"] = {
-        ["guifg"] = "0D",
-        ["ctermfg"] = "0D",
+        ["fg"] = "0D",
     },
     ["TSPunctSpecial"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSRepeat"] = {
-        ["guifg"] = "0A",
-        ["ctermfg"] = "0A",
+        ["fg"] = "0A",
     },
     ["TSString"] = {
-        ["guifg"] = "0B",
-        ["ctermfg"] = "0B",
+        ["fg"] = "0B",
     },
     ["TSType"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSTypeBuiltin"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSVariable"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSVariableBuiltin"] = {
-        ["guifg"] = "0A",
-        ["ctermfg"] = "0A",
+        ["fg"] = "0A",
     },
     ["TSFloat"] = {
-        ["guifg"] = "09",
-        ["ctermfg"] = "09",
+        ["fg"] = "09",
     },
     ["TSKeyword"] = {
-        ["guifg"] = "0A",
-        ["ctermfg"] = "0A",
+        ["fg"] = "0A",
     },
     ["TSKeywordOperator"] = {
-        ["guifg"] = "0F",
-        ["ctermfg"] = "0F",
+        ["fg"] = "0F",
     },
     ["TSKeywordFunction"] = {
-        ["guifg"] = "0E",
-        ["ctermfg"] = "0E",
+        ["fg"] = "0E",
     },
     ["TSKeywordReturn"] = {
-        ["guifg"] = "08",
-        ["ctermfg"] = "08",
+        ["fg"] = "08",
         ["attr"] = "bold",
     },
     ["TSMethod"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSNamespace"] = {
-        ["guifg"] = "05",
-        ["ctermfg"] = "05",
+        ["fg"] = "05",
     },
     ["TSException"] = {
-        ["guifg"] = "0C",
-        ["ctermfg"] = "0C",
+        ["fg"] = "0C",
     },
     ["TSInclude"] = {
-        ["guifg"] = "0E",
-        ["ctermfg"] = "0E",
+        ["fg"] = "0E",
     },
     ["TSTag"] = {
-        ["guifg"] = "0D",
-        ["ctermfg"] = "0D",
+        ["fg"] = "0D",
     },
     ["TSTagCustom"] = {
-        ["guifg"] = "0D",
-        ["ctermfg"] = "0D",
+        ["fg"] = "0D",
     },
     ["TSTagDelimiter"] = {
-        ["guifg"] = "0D",
-        ["ctermfg"] = "0D",
+        ["fg"] = "0D",
     },
     ["TSTagAttribute"] = {
-        ["guifg"] = "0A",
-        ["ctermfg"] = "0A",
+        ["fg"] = "0A",
     },
     ["TSStatement"] = {
-        ["guifg"] = "0A",
-        ["ctermfg"] = "0A",
+        ["fg"] = "0A",
     },
     ["TSError"] = {
-        ["guifg"] = "08",
-        ["ctermfg"] = "08",
+        ["fg"] = "08",
     },
     -- Treesitter 0.8 or newer
     ["@function"] = {link = "TSFunction"},
+    -- ["@conceal"] = {link = "Conceal"},
     ["@constant"] = {link = "TSConstant"},
     ["@constructor"] = {link = "TSConstructor"},
     ["@conditional"] = {link = "TSConditional"},
@@ -833,6 +789,7 @@ local groups = {
     ["@punctuation.special"] = {link = "TSPunctSpecial"},
     ["@repeat"] = {link = "TSRepeat"},
     ["@string"] = {link = "TSString"},
+    -- ["@spell"] = {link = "Underlined"},
     ["@type"] = {link = "TSType"},
     ["@type.builtin"] = {link = "TSTypeBuiltin"},
     ["@variable"] = {link = "TSVariable"},
