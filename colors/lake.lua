@@ -84,7 +84,7 @@ local groups = {
         ["ctermbg"] = "09",
     },
     ["Italic"] = {
-        ["attr"] = "none",
+        ["attr"] = "italic",
     },
     ["Macro"] = {
         ["guifg"] = "05",
@@ -1040,6 +1040,7 @@ local groups = {
     ["@property"] = {link = "TSProperty"},
     ["@field"] = {link = "TSField"},
     ["@punctuation.delimiter"] = {link = "TSPunctDelimiter"},
+    ["@punctuation.delimiter.markdown"] = {link = "Delimiter"},
     ["@punctuation.bracket"] = {link = "TSPunctBracket"},
     ["@punctuation.special"] = {link = "TSPunctSpecial"},
     ["@repeat"] = {link = "TSRepeat"},
@@ -1057,6 +1058,11 @@ local groups = {
     ["@namespace"] = {link = "TSNamespace"},
     ["@exception"] = {link = "TSException"},
     ["@include"] = {link = "TSInclude"},
+    ["@text.title"] = {link = "Title"},
+    ["@text.literal"] = {link = "String"},
+    ["@text.strong"] = {link = "Bold"},
+    ["@text.emphasis"] = {link = "Italic"},
+    ["@text.uri"] = {link = "String"},
     ["@tag"] = {link = "TSTag"},
     ["@tag.custom"] = {link = "TSTagCustom"},
     ["@tag.delimiter"] = {link = "TSTagDelimiter"},
@@ -1078,6 +1084,9 @@ for group, settings in pairs(groups) do
     end
     if settings.attr == 'undercurl' then
         opts.undercurl = true
+    end
+    if settings.attr == 'italic' then
+        opts.italic = true
     end
     if settings.link then
         opts.link = settings.link
