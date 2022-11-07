@@ -808,6 +808,7 @@ local groups = {
     ["@text.strong"] = {link = "Bold"},
     ["@text.emphasis"] = {link = "Italic"},
     ["@text.uri"] = {link = "String"},
+    ["@text.reference"] = {fg = "08"},
     ["@tag"] = {link = "TSTag"},
     ["@tag.custom"] = {link = "TSTagCustom"},
     ["@tag.delimiter"] = {link = "TSTagDelimiter"},
