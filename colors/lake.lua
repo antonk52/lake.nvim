@@ -791,6 +791,7 @@ local groups = {
     ["@string"] = {link = "TSString"},
     -- ["@spell"] = {link = "Underlined"},
     ["@type"] = {link = "TSType"},
+    ["@text.todo"] = {link = "Normal"},
     ["@type.builtin"] = {link = "TSTypeBuiltin"},
     ["@variable"] = {link = "TSVariable"},
     ["@variable.builtin"] = {link = "TSVariableBuiltin"},
