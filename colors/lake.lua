@@ -807,6 +807,7 @@ local groups = {
     ["@text.title"] = {link = "Title"},
     ["@text.literal"] = {link = "String"},
     ["@text.strong"] = {link = "Bold"},
+    ["@text.strike"] = {link = "Comment"},
     ["@text.emphasis"] = {link = "Italic"},
     ["@text.uri"] = {link = "String"},
     ["@text.reference"] = {fg = "08"},
