@@ -496,6 +496,9 @@ local groups = {
     ["typescriptStorageClass"] = {
         ["fg"] = "0A",
     },
+    ["IndentBlanklineChar"] = {
+        fg = "02"
+    },
     -- Mail
     ["mailQuoted1"] = {
         ["fg"] = "0A",
