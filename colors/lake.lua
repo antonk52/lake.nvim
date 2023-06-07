@@ -812,6 +812,7 @@ local groups = {
     ["@text.literal"] = {link = "String"},
     ["@text.strong"] = {link = "Bold"},
     ["@text.strike"] = {link = "Comment"},
+    ["@text.quote"] = {fg = "04"},
     ["@text.emphasis"] = {link = "Italic"},
     ["@text.uri"] = {link = "String"},
     ["@text.reference"] = {fg = "08"},
