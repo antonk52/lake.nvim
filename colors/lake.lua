@@ -500,6 +500,9 @@ local groups = {
     ["IndentBlanklineChar"] = {
         fg = "02"
     },
+    ["IndentLine"] = {
+        fg = "02"
+    },
     -- Mail
     ["mailQuoted1"] = {
         ["fg"] = "0A",
