@@ -778,6 +778,16 @@ local groups = {
     ["TSError"] = {
         ["fg"] = "08",
     },
+    -- AI Suggestions
+    ["AISuggestion"] = {
+        ["fg"] = "02",
+    },
+    ["CopilotAnnotation"] = {
+        ["fg"] = "02",
+    },
+    ["CopilotSuggestion"] = {
+        ["fg"] = "02",
+    },
     -- Treesitter 0.8 or newer
     ["@function"] = {link = "TSFunction"},
     -- ["@conceal"] = {link = "Conceal"},
