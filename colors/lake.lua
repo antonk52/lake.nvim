@@ -37,6 +37,7 @@ local groups = {
         ["fg"] = "05",
         ["bg"] = "00",
     },
+    ["NormalFloat"] = { link = "Normal" },
     ["Bold"] = {
         ["attr"] = "bold",
     },
