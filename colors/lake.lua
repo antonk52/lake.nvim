@@ -37,6 +37,7 @@ local groups = {
         ["fg"] = "05",
         ["bg"] = "00",
     },
+    ["NormalNC"] = { link = "ColorColumn" },
     ["NormalFloat"] = { link = "Normal" },
     ["Bold"] = {
         ["attr"] = "bold",
