@@ -17,826 +17,827 @@ local theme = {
     ["0E"] = { ["gui"] = t.color0E, ["cterm"] = 14, ["name"] = "Violet" },
     ["0F"] = { ["gui"] = t.color0F, ["cterm"] = 15, ["name"] = "Orange" },
 }
+
 vim.g.lake_palette = theme
 
 if vim.version().minor < 7 then
-    vim.notify_once("lake requires neovim v0.7 or newer")
+    vim.notify_once('lake requires neovim v0.7 or newer')
     return
 end
 
 if vim.g.colors_name then
-    vim.cmd("hi clear")
+    vim.cmd('hi clear')
 end
 
-vim.g.colors_name = "lake"
+vim.g.colors_name = 'lake'
 vim.o.termguicolors = true
 
 local groups = {
     -- Base
-    ["Normal"] = {
-        ["fg"] = "05",
-        ["bg"] = "00",
+    ['Normal'] = {
+        ['fg'] = '05',
+        ['bg'] = '00',
     },
-    ["NormalNC"] = { link = "ColorColumn" },
-    ["NormalFloat"] = { link = "Normal" },
-    ["Bold"] = {
-        ["attr"] = "bold",
+    ['NormalNC'] = { link = 'ColorColumn' },
+    ['NormalFloat'] = { link = 'Normal' },
+    ['Bold'] = {
+        ['attr'] = 'bold',
     },
-    ["Debug"] = {
-        ["fg"] = "08",
+    ['Debug'] = {
+        ['fg'] = '08',
     },
-    ["Directory"] = {
-        ["fg"] = "0D",
+    ['Directory'] = {
+        ['fg'] = '0D',
     },
-    ["Error"] = {
-        ["fg"] = "00",
-        ["bg"] = "08",
+    ['Error'] = {
+        ['fg'] = '00',
+        ['bg'] = '08',
     },
-    ["ErrorMsg"] = {
-        ["fg"] = "08",
-        ["bg"] = "00",
+    ['ErrorMsg'] = {
+        ['fg'] = '08',
+        ['bg'] = '00',
     },
-    ["Exception"] = {
-        ["fg"] = "08",
+    ['Exception'] = {
+        ['fg'] = '08',
     },
-    ["FoldColumn"] = {
-        ["fg"] = "0C",
-        ["bg"] = "01",
+    ['FoldColumn'] = {
+        ['fg'] = '0C',
+        ['bg'] = '01',
     },
-    ["Folded"] = {
-        ["fg"] = "03",
-        ["bg"] = "01",
+    ['Folded'] = {
+        ['fg'] = '03',
+        ['bg'] = '01',
     },
-    ["IncSearch"] = {
-        ["fg"] = "01",
-        ["bg"] = "09",
+    ['IncSearch'] = {
+        ['fg'] = '01',
+        ['bg'] = '09',
     },
-    ["Italic"] = {
-        ["attr"] = "italic",
+    ['Italic'] = {
+        ['attr'] = 'italic',
     },
-    ["Macro"] = {
-        ["fg"] = "05",
+    ['Macro'] = {
+        ['fg'] = '05',
     },
-    ["MatchParen"] = {
-        ["bg"] = "03",
+    ['MatchParen'] = {
+        ['bg'] = '03',
     },
-    ["ModeMsg"] = {
-        ["fg"] = "0B",
+    ['ModeMsg'] = {
+        ['fg'] = '0B',
     },
-    ["MoreMsg"] = {
-        ["fg"] = "0B",
+    ['MoreMsg'] = {
+        ['fg'] = '0B',
     },
-    ["Question"] = {
-        ["fg"] = "0D",
+    ['Question'] = {
+        ['fg'] = '0D',
     },
-    ["Search"] = {
-        ["fg"] = "01",
-        ["bg"] = "0A",
+    ['Search'] = {
+        ['fg'] = '01',
+        ['bg'] = '0A',
     },
-    ["Substitute"] = {
-        ["fg"] = "01",
-        ["bg"] = "0A",
+    ['Substitute'] = {
+        ['fg'] = '01',
+        ['bg'] = '0A',
     },
-    ["SpecialKey"] = {
-        ["fg"] = "03",
+    ['SpecialKey'] = {
+        ['fg'] = '03',
     },
-    ["TooLong"] = {
-        ["fg"] = "08",
+    ['TooLong'] = {
+        ['fg'] = '08',
     },
-    ["Underlined"] = {
-        ["fg"] = "08",
+    ['Underlined'] = {
+        ['fg'] = '08',
     },
-    ["Visual"] = {
-        ["bg"] = "02",
+    ['Visual'] = {
+        ['bg'] = '02',
     },
-    ["VisualNOS"] = {
-        ["fg"] = "08",
+    ['VisualNOS'] = {
+        ['fg'] = '08',
     },
-    ["WarningMsg"] = {
-        ["fg"] = "08",
+    ['WarningMsg'] = {
+        ['fg'] = '08',
     },
-    ["WildMenu"] = {
-        ["fg"] = "08",
-        ["bg"] = "0A",
+    ['WildMenu'] = {
+        ['fg'] = '08',
+        ['bg'] = '0A',
     },
-    ["WinSeparator"] = {
-        ["fg"] = "02",
+    ['WinSeparator'] = {
+        ['fg'] = '02',
     },
-    ["Title"] = {
-        ["fg"] = "0D",
+    ['Title'] = {
+        ['fg'] = '0D',
     },
-    ["Conceal"] = {
-        ["fg"] = "0D",
-        ["bg"] = "00",
+    ['Conceal'] = {
+        ['fg'] = '0D',
+        ['bg'] = '00',
     },
-    ["Cursor"] = {
-        ["fg"] = "00",
-        ["bg"] = "05",
+    ['Cursor'] = {
+        ['fg'] = '00',
+        ['bg'] = '05',
     },
-    ["NonText"] = {
-        ["fg"] = "03",
+    ['NonText'] = {
+        ['fg'] = '03',
     },
-    ["LineNr"] = {
-        ["fg"] = "03",
-        ["bg"] = "01",
+    ['LineNr'] = {
+        ['fg'] = '03',
+        ['bg'] = '01',
     },
-    ["SignColumn"] = {
-        ["fg"] = "03",
-        ["bg"] = "01",
+    ['SignColumn'] = {
+        ['fg'] = '03',
+        ['bg'] = '01',
     },
-    ["StatusLine"] = {
-        ["fg"] = "04",
-        ["bg"] = "02",
+    ['StatusLine'] = {
+        ['fg'] = '04',
+        ['bg'] = '02',
     },
-    ["StatusLineNC"] = {
-        ["fg"] = "03",
-        ["bg"] = "01",
+    ['StatusLineNC'] = {
+        ['fg'] = '03',
+        ['bg'] = '01',
     },
-    ["VertSplit"] = {
-        ["fg"] = "02",
-        ["bg"] = "02",
+    ['VertSplit'] = {
+        ['fg'] = '02',
+        ['bg'] = '02',
     },
-    ["ColorColumn"] = {
-        ["bg"] = "01",
+    ['ColorColumn'] = {
+        ['bg'] = '01',
     },
-    ["CursorColumn"] = {
-        ["bg"] = "01",
+    ['CursorColumn'] = {
+        ['bg'] = '01',
     },
-    ["CursorLine"] = {
-        ["bg"] = "01",
+    ['CursorLine'] = {
+        ['bg'] = '01',
     },
-    ["CursorLineNr"] = {
-        ["fg"] = "04",
-        ["bg"] = "01",
+    ['CursorLineNr'] = {
+        ['fg'] = '04',
+        ['bg'] = '01',
     },
-    ["QuickFixLine"] = {
-        ["bg"] = "01",
+    ['QuickFixLine'] = {
+        ['bg'] = '01',
     },
-    ["PMenu"] = {
-        ["fg"] = "05",
-        ["bg"] = "01",
+    ['PMenu'] = {
+        ['fg'] = '05',
+        ['bg'] = '01',
     },
-    ["PMenuSel"] = {
-        ["fg"] = "01",
-        ["bg"] = "05",
+    ['PMenuSel'] = {
+        ['fg'] = '01',
+        ['bg'] = '05',
     },
-    ["TabLine"] = {
-        ["fg"] = "03",
-        ["bg"] = "01",
+    ['TabLine'] = {
+        ['fg'] = '03',
+        ['bg'] = '01',
     },
-    ["TabLineFill"] = {
-        ["fg"] = "03",
-        ["bg"] = "01",
+    ['TabLineFill'] = {
+        ['fg'] = '03',
+        ['bg'] = '01',
     },
-    ["TabLineSel"] = {
-        ["fg"] = "0B",
-        ["bg"] = "01",
+    ['TabLineSel'] = {
+        ['fg'] = '0B',
+        ['bg'] = '01',
     },
     -- Builtin
-    ["Boolean"] = {
-        ["fg"] = "09",
+    ['Boolean'] = {
+        ['fg'] = '09',
     },
-    ["Character"] = {
-        ["fg"] = "08",
+    ['Character'] = {
+        ['fg'] = '08',
     },
-    ["Comment"] = {
-        ["fg"] = "03",
+    ['Comment'] = {
+        ['fg'] = '03',
     },
-    ["Conditional"] = {
-        ["fg"] = "0E",
+    ['Conditional'] = {
+        ['fg'] = '0E',
     },
-    ["Constant"] = {
-        ["fg"] = "05",
+    ['Constant'] = {
+        ['fg'] = '05',
     },
-    ["Define"] = {
-        ["fg"] = "0E",
+    ['Define'] = {
+        ['fg'] = '0E',
     },
-    ["Delimiter"] = {
-        ["fg"] = "0F",
+    ['Delimiter'] = {
+        ['fg'] = '0F',
     },
-    ["Float"] = {
-        ["fg"] = "09",
+    ['Float'] = {
+        ['fg'] = '09',
     },
-    ["Function"] = {
-        ["fg"] = "0D",
+    ['Function'] = {
+        ['fg'] = '0D',
     },
-    ["Identifier"] = {
-        ["fg"] = "05",
+    ['Identifier'] = {
+        ['fg'] = '05',
     },
-    ["Include"] = {
-        ["fg"] = "0D",
+    ['Include'] = {
+        ['fg'] = '0D',
     },
-    ["Keyword"] = {
-        ["fg"] = "05",
+    ['Keyword'] = {
+        ['fg'] = '05',
     },
-    ["Label"] = {
-        ["fg"] = "0A",
+    ['Label'] = {
+        ['fg'] = '0A',
     },
-    ["Number"] = {
-        ["fg"] = "09",
+    ['Number'] = {
+        ['fg'] = '09',
     },
-    ["Operator"] = {
-        ["fg"] = "05",
+    ['Operator'] = {
+        ['fg'] = '05',
     },
-    ["PreProc"] = {
-        ["fg"] = "0A",
+    ['PreProc'] = {
+        ['fg'] = '0A',
     },
-    ["Repeat"] = {
-        ["fg"] = "0A",
+    ['Repeat'] = {
+        ['fg'] = '0A',
     },
-    ["Special"] = {
-        ["fg"] = "0A",
+    ['Special'] = {
+        ['fg'] = '0A',
     },
-    ["SpecialChar"] = {
-        ["fg"] = "0F",
+    ['SpecialChar'] = {
+        ['fg'] = '0F',
     },
-    ["Statement"] = {
-        ["fg"] = "08",
+    ['Statement'] = {
+        ['fg'] = '08',
     },
-    ["StorageClass"] = {
-        ["fg"] = "0A",
+    ['StorageClass'] = {
+        ['fg'] = '0A',
     },
-    ["String"] = {
-        ["fg"] = "0B",
+    ['String'] = {
+        ['fg'] = '0B',
     },
-    ["Structure"] = {
-        ["fg"] = "0E",
+    ['Structure'] = {
+        ['fg'] = '0E',
     },
-    ["Tag"] = {
-        ["fg"] = "0A",
+    ['Tag'] = {
+        ['fg'] = '0A',
     },
-    ["Todo"] = {
-        ["fg"] = "0A",
-        ["bg"] = "01",
+    ['Todo'] = {
+        ['fg'] = '0A',
+        ['bg'] = '01',
     },
-    ["Type"] = {
-        ["fg"] = "0A",
+    ['Type'] = {
+        ['fg'] = '0A',
     },
-    ["Typedef"] = {
-        ["fg"] = "0A",
+    ['Typedef'] = {
+        ['fg'] = '0A',
     },
     -- C
-    ["cOperator"] = {
-        ["fg"] = "0C",
+    ['cOperator'] = {
+        ['fg'] = '0C',
     },
-    ["cPreCondit"] = {
-        ["fg"] = "0E",
+    ['cPreCondit'] = {
+        ['fg'] = '0E',
     },
     -- C#
-    ["csClass"] = {
-        ["fg"] = "0A",
+    ['csClass'] = {
+        ['fg'] = '0A',
     },
-    ["csAttribute"] = {
-        ["fg"] = "0A",
+    ['csAttribute'] = {
+        ['fg'] = '0A',
     },
-    ["csModifier"] = {
-        ["fg"] = "0E",
+    ['csModifier'] = {
+        ['fg'] = '0E',
     },
-    ["csType"] = {
-        ["fg"] = "08",
+    ['csType'] = {
+        ['fg'] = '08',
     },
-    ["csUnspecifiedStatement"] = {
-        ["fg"] = "0D",
+    ['csUnspecifiedStatement'] = {
+        ['fg'] = '0D',
     },
-    ["csContextualStatement"] = {
-        ["fg"] = "0E",
+    ['csContextualStatement'] = {
+        ['fg'] = '0E',
     },
-    ["csNewDecleration"] = {
-        ["fg"] = "08",
+    ['csNewDecleration'] = {
+        ['fg'] = '08',
     },
     -- CSS
-    ["cssBraces"] = {
-        ["fg"] = "05",
+    ['cssBraces'] = {
+        ['fg'] = '05',
     },
-    ["cssClassName"] = {
-        ["fg"] = "0E",
+    ['cssClassName'] = {
+        ['fg'] = '0E',
     },
-    ["cssColor"] = {
-        ["fg"] = "0C",
+    ['cssColor'] = {
+        ['fg'] = '0C',
     },
     -- Diff
-    ["DiffAdd"] = {
-        ["fg"] = "0B",
-        ["bg"] = "01",
+    ['DiffAdd'] = {
+        ['fg'] = '0B',
+        ['bg'] = '01',
     },
-    ["DiffChange"] = {
-        ["fg"] = "03",
-        ["bg"] = "01",
+    ['DiffChange'] = {
+        ['fg'] = '03',
+        ['bg'] = '01',
     },
-    ["DiffDelete"] = {
-        ["fg"] = "08",
-        ["bg"] = "01",
+    ['DiffDelete'] = {
+        ['fg'] = '08',
+        ['bg'] = '01',
     },
-    ["DiffText"] = {
-        ["fg"] = "0D",
-        ["bg"] = "01",
+    ['DiffText'] = {
+        ['fg'] = '0D',
+        ['bg'] = '01',
     },
-    ["DiffAdded"] = {
-        ["fg"] = "0B",
-        ["bg"] = "00",
+    ['DiffAdded'] = {
+        ['fg'] = '0B',
+        ['bg'] = '00',
     },
-    ["DiffFile"] = {
-        ["fg"] = "08",
-        ["bg"] = "00",
+    ['DiffFile'] = {
+        ['fg'] = '08',
+        ['bg'] = '00',
     },
-    ["DiffNewFile"] = {
-        ["fg"] = "0B",
-        ["bg"] = "00",
+    ['DiffNewFile'] = {
+        ['fg'] = '0B',
+        ['bg'] = '00',
     },
-    ["DiffLine"] = {
-        ["fg"] = "0D",
-        ["bg"] = "00",
+    ['DiffLine'] = {
+        ['fg'] = '0D',
+        ['bg'] = '00',
     },
-    ["DiffRemoved"] = {
-        ["fg"] = "08",
-        ["bg"] = "00",
+    ['DiffRemoved'] = {
+        ['fg'] = '08',
+        ['bg'] = '00',
     },
     -- Docker
-    ["dockerfileKeyword"] = {
-        ["fg"] = "0E",
+    ['dockerfileKeyword'] = {
+        ['fg'] = '0E',
     },
     -- Git
-    ["gitcommitOverflow"] = {
-        ["fg"] = "08",
+    ['gitcommitOverflow'] = {
+        ['fg'] = '08',
     },
-    ["gitcommitSummary"] = {
-        ["fg"] = "0B",
+    ['gitcommitSummary'] = {
+        ['fg'] = '0B',
     },
-    ["gitcommitComment"] = {
-        ["fg"] = "03",
+    ['gitcommitComment'] = {
+        ['fg'] = '03',
     },
-    ["gitcommitUntracked"] = {
-        ["fg"] = "03",
+    ['gitcommitUntracked'] = {
+        ['fg'] = '03',
     },
-    ["gitcommitDiscarded"] = {
-        ["fg"] = "03",
+    ['gitcommitDiscarded'] = {
+        ['fg'] = '03',
     },
-    ["gitcommitSelected"] = {
-        ["fg"] = "03",
+    ['gitcommitSelected'] = {
+        ['fg'] = '03',
     },
-    ["gitcommitHeader"] = {
-        ["fg"] = "0E",
+    ['gitcommitHeader'] = {
+        ['fg'] = '0E',
     },
-    ["gitcommitSelectedType"] = {
-        ["fg"] = "0D",
+    ['gitcommitSelectedType'] = {
+        ['fg'] = '0D',
     },
-    ["gitcommitUnmergedType"] = {
-        ["fg"] = "0D",
+    ['gitcommitUnmergedType'] = {
+        ['fg'] = '0D',
     },
-    ["gitcommitDiscardedType"] = {
-        ["fg"] = "0D",
+    ['gitcommitDiscardedType'] = {
+        ['fg'] = '0D',
     },
-    ["gitcommitBranch"] = {
-        ["fg"] = "09",
-        ["attr"] = "bold",
+    ['gitcommitBranch'] = {
+        ['fg'] = '09',
+        ['attr'] = 'bold',
     },
-    ["gitcommitUntrackedFile"] = {
-        ["fg"] = "0A",
+    ['gitcommitUntrackedFile'] = {
+        ['fg'] = '0A',
     },
-    ["gitcommitUnmergedFile"] = {
-        ["fg"] = "08",
-        ["attr"] = "bold",
+    ['gitcommitUnmergedFile'] = {
+        ['fg'] = '08',
+        ['attr'] = 'bold',
     },
-    ["gitcommitDiscardedFile"] = {
-        ["fg"] = "08",
-        ["attr"] = "bold",
+    ['gitcommitDiscardedFile'] = {
+        ['fg'] = '08',
+        ['attr'] = 'bold',
     },
-    ["gitcommitSelectedFile"] = {
-        ["fg"] = "0B",
-        ["attr"] = "bold",
+    ['gitcommitSelectedFile'] = {
+        ['fg'] = '0B',
+        ['attr'] = 'bold',
     },
     -- GitGutter
-    ["GitGutterAdd"] = {
-        ["fg"] = "0B",
-        ["bg"] = "01",
+    ['GitGutterAdd'] = {
+        ['fg'] = '0B',
+        ['bg'] = '01',
     },
-    ["GitGutterChange"] = {
-        ["fg"] = "0D",
-        ["bg"] = "01",
+    ['GitGutterChange'] = {
+        ['fg'] = '0D',
+        ['bg'] = '01',
     },
-    ["GitGutterDelete"] = {
-        ["fg"] = "08",
-        ["bg"] = "01",
+    ['GitGutterDelete'] = {
+        ['fg'] = '08',
+        ['bg'] = '01',
     },
-    ["GitGutterChangeDelete"] = {
-        ["fg"] = "0E",
-        ["bg"] = "01",
+    ['GitGutterChangeDelete'] = {
+        ['fg'] = '0E',
+        ['bg'] = '01',
     },
     -- HTML
-    ["htmlBold"] = {
-        ["fg"] = "0A",
+    ['htmlBold'] = {
+        ['fg'] = '0A',
     },
-    ["htmlItalic"] = {
-        ["fg"] = "0E",
+    ['htmlItalic'] = {
+        ['fg'] = '0E',
     },
-    ["htmlEndTag"] = {
-        ["fg"] = "05",
+    ['htmlEndTag'] = {
+        ['fg'] = '05',
     },
-    ["htmlTag"] = {
-        ["fg"] = "05",
+    ['htmlTag'] = {
+        ['fg'] = '05',
     },
     -- JavaScript
-    ["javaScript"] = {
-        ["fg"] = "05",
+    ['javaScript'] = {
+        ['fg'] = '05',
     },
-    ["javaScriptBraces"] = {
-        ["fg"] = "05",
+    ['javaScriptBraces'] = {
+        ['fg'] = '05',
     },
-    ["javaScriptNumber"] = {
-        ["fg"] = "09",
+    ['javaScriptNumber'] = {
+        ['fg'] = '09',
     },
-    ["jsOperator"] = {
-        ["fg"] = "0D",
+    ['jsOperator'] = {
+        ['fg'] = '0D',
     },
-    ["jsStatement"] = {
-        ["fg"] = "0E",
+    ['jsStatement'] = {
+        ['fg'] = '0E',
     },
-    ["jsReturn"] = {
-        ["fg"] = "08",
+    ['jsReturn'] = {
+        ['fg'] = '08',
     },
-    ["jsThis"] = {
-        ["fg"] = "08",
+    ['jsThis'] = {
+        ['fg'] = '08',
     },
-    ["jsClassDefinition"] = {
-        ["fg"] = "0A",
+    ['jsClassDefinition'] = {
+        ['fg'] = '0A',
     },
-    ["jsFunction"] = {
-        ["fg"] = "0E",
+    ['jsFunction'] = {
+        ['fg'] = '0E',
     },
-    ["jsFuncName"] = {
-        ["fg"] = "0D",
+    ['jsFuncName'] = {
+        ['fg'] = '0D',
     },
-    ["jsFuncCall"] = {
-        ["fg"] = "0D",
+    ['jsFuncCall'] = {
+        ['fg'] = '0D',
     },
-    ["jsClassFuncName"] = {
-        ["fg"] = "0D",
+    ['jsClassFuncName'] = {
+        ['fg'] = '0D',
     },
-    ["jsClassMethodType"] = {
-        ["fg"] = "0E",
+    ['jsClassMethodType'] = {
+        ['fg'] = '0E',
     },
-    ["jsRegexpString"] = {
-        ["fg"] = "0C",
+    ['jsRegexpString'] = {
+        ['fg'] = '0C',
     },
-    ["jsGlobalObjects"] = {
-        ["fg"] = "0A",
+    ['jsGlobalObjects'] = {
+        ['fg'] = '0A',
     },
-    ["jsGlobalNodeObjects"] = {
-        ["fg"] = "0A",
+    ['jsGlobalNodeObjects'] = {
+        ['fg'] = '0A',
     },
-    ["jsExceptions"] = {
-        ["fg"] = "0A",
+    ['jsExceptions'] = {
+        ['fg'] = '0A',
     },
-    ["jsBuiltins"] = {
-        ["fg"] = "0A",
+    ['jsBuiltins'] = {
+        ['fg'] = '0A',
     },
-    ["typescriptAliasKeyword"] = {
-        ["fg"] = "0E",
+    ['typescriptAliasKeyword'] = {
+        ['fg'] = '0E',
     },
-    ["typescriptEndColons"] = {
-        ["fg"] = "05",
+    ['typescriptEndColons'] = {
+        ['fg'] = '05',
     },
-    ["typescriptStorageClass"] = {
-        ["fg"] = "0A",
+    ['typescriptStorageClass'] = {
+        ['fg'] = '0A',
     },
-    ["IndentBlanklineChar"] = {
-        fg = "02"
+    ['IndentBlanklineChar'] = {
+        fg = '02',
     },
-    ["IndentLine"] = {
-        fg = "02"
+    ['IndentLine'] = {
+        fg = '02',
     },
     -- Mail
-    ["mailQuoted1"] = {
-        ["fg"] = "0A",
+    ['mailQuoted1'] = {
+        ['fg'] = '0A',
     },
-    ["mailQuoted2"] = {
-        ["fg"] = "0B",
+    ['mailQuoted2'] = {
+        ['fg'] = '0B',
     },
-    ["mailQuoted3"] = {
-        ["fg"] = "0E",
+    ['mailQuoted3'] = {
+        ['fg'] = '0E',
     },
-    ["mailQuoted4"] = {
-        ["fg"] = "0C",
+    ['mailQuoted4'] = {
+        ['fg'] = '0C',
     },
-    ["mailQuoted5"] = {
-        ["fg"] = "0D",
+    ['mailQuoted5'] = {
+        ['fg'] = '0D',
     },
-    ["mailQuoted6"] = {
-        ["fg"] = "0A",
+    ['mailQuoted6'] = {
+        ['fg'] = '0A',
     },
-    ["mailURL"] = {
-        ["fg"] = "0D",
+    ['mailURL'] = {
+        ['fg'] = '0D',
     },
-    ["mailEmail"] = {
-        ["fg"] = "0D",
+    ['mailEmail'] = {
+        ['fg'] = '0D',
     },
     -- Markdown
-    ["markdownCode"] = {
-        ["fg"] = "0B",
+    ['markdownCode'] = {
+        ['fg'] = '0B',
     },
-    ["markdownError"] = {
-        ["fg"] = "05",
-        ["bg"] = "00",
+    ['markdownError'] = {
+        ['fg'] = '05',
+        ['bg'] = '00',
     },
-    ["markdownCodeBlock"] = {
-        ["fg"] = "0B",
+    ['markdownCodeBlock'] = {
+        ['fg'] = '0B',
     },
-    ["markdownHeadingDelimiter"] = {
-        ["fg"] = "0D",
+    ['markdownHeadingDelimiter'] = {
+        ['fg'] = '0D',
     },
     -- NERDTree
-    ["NERDTreeDirSlash"] = {
-        ["fg"] = "0D",
+    ['NERDTreeDirSlash'] = {
+        ['fg'] = '0D',
     },
-    ["NERDTreeExecFile"] = {
-        ["fg"] = "05",
+    ['NERDTreeExecFile'] = {
+        ['fg'] = '05',
     },
     -- PHP
-    ["phpMemberSelector"] = {
-        ["fg"] = "05",
+    ['phpMemberSelector'] = {
+        ['fg'] = '05',
     },
-    ["phpComparison"] = {
-        ["fg"] = "05",
+    ['phpComparison'] = {
+        ['fg'] = '05',
     },
-    ["phpParent"] = {
-        ["fg"] = "05",
+    ['phpParent'] = {
+        ['fg'] = '05',
     },
-    ["phpMethodsVar"] = {
-        ["fg"] = "0C",
+    ['phpMethodsVar'] = {
+        ['fg'] = '0C',
     },
     -- Python
-    ["pythonOperator"] = {
-        ["fg"] = "0E",
+    ['pythonOperator'] = {
+        ['fg'] = '0E',
     },
-    ["pythonRepeat"] = {
-        ["fg"] = "0E",
+    ['pythonRepeat'] = {
+        ['fg'] = '0E',
     },
-    ["pythonInclude"] = {
-        ["fg"] = "0E",
+    ['pythonInclude'] = {
+        ['fg'] = '0E',
     },
-    ["pythonStatement"] = {
-        ["fg"] = "0E",
+    ['pythonStatement'] = {
+        ['fg'] = '0E',
     },
     -- Ruby
-    ["rubyAttribute"] = {
-        ["fg"] = "0D",
+    ['rubyAttribute'] = {
+        ['fg'] = '0D',
     },
-    ["rubyConstant"] = {
-        ["fg"] = "0A",
+    ['rubyConstant'] = {
+        ['fg'] = '0A',
     },
-    ["rubyInterpolationDelimiter"] = {
-        ["fg"] = "0F",
+    ['rubyInterpolationDelimiter'] = {
+        ['fg'] = '0F',
     },
-    ["rubyRegexp"] = {
-        ["fg"] = "0C",
+    ['rubyRegexp'] = {
+        ['fg'] = '0C',
     },
-    ["rubySymbol"] = {
-        ["fg"] = "0B",
+    ['rubySymbol'] = {
+        ['fg'] = '0B',
     },
-    ["rubyStringDelimiter"] = {
-        ["fg"] = "0B",
+    ['rubyStringDelimiter'] = {
+        ['fg'] = '0B',
     },
     -- SASS
-    ["sassidChar"] = {
-        ["fg"] = "08",
+    ['sassidChar'] = {
+        ['fg'] = '08',
     },
-    ["sassClassChar"] = {
-        ["fg"] = "09",
+    ['sassClassChar'] = {
+        ['fg'] = '09',
     },
-    ["sassInclude"] = {
-        ["fg"] = "0E",
+    ['sassInclude'] = {
+        ['fg'] = '0E',
     },
-    ["sassMixing"] = {
-        ["fg"] = "0E",
+    ['sassMixing'] = {
+        ['fg'] = '0E',
     },
-    ["sassMixinName"] = {
-        ["fg"] = "0D",
+    ['sassMixinName'] = {
+        ['fg'] = '0D',
     },
     -- Signify
-    ["SignifySignAdd"] = {
-        ["fg"] = "0B",
-        ["bg"] = "01",
+    ['SignifySignAdd'] = {
+        ['fg'] = '0B',
+        ['bg'] = '01',
     },
-    ["SignifySignChange"] = {
-        ["fg"] = "0D",
-        ["bg"] = "01",
+    ['SignifySignChange'] = {
+        ['fg'] = '0D',
+        ['bg'] = '01',
     },
-    ["SignifySignDelete"] = {
-        ["fg"] = "08",
-        ["bg"] = "01",
+    ['SignifySignDelete'] = {
+        ['fg'] = '08',
+        ['bg'] = '01',
     },
     -- Spelling
-    ["SpellBad"] = {
-        ["attr"] = "undercurl",
-        ["guisp"] = "08",
+    ['SpellBad'] = {
+        ['attr'] = 'undercurl',
+        ['guisp'] = '08',
     },
-    ["SpellLocal"] = {
-        ["attr"] = "undercurl",
-        ["guisp"] = "0C",
+    ['SpellLocal'] = {
+        ['attr'] = 'undercurl',
+        ['guisp'] = '0C',
     },
-    ["SpellCap"] = {
-        ["attr"] = "undercurl",
-        ["guisp"] = "0D",
+    ['SpellCap'] = {
+        ['attr'] = 'undercurl',
+        ['guisp'] = '0D',
     },
-    ["SpellRare"] = {
-        ["attr"] = "undercurl",
-        ["guisp"] = "0E",
+    ['SpellRare'] = {
+        ['attr'] = 'undercurl',
+        ['guisp'] = '0E',
     },
     -- Startify
-    ["StartifyBracket"] = {
-        ["fg"] = "03",
+    ['StartifyBracket'] = {
+        ['fg'] = '03',
     },
-    ["StartifyFile"] = {
-        ["fg"] = "07",
+    ['StartifyFile'] = {
+        ['fg'] = '07',
     },
-    ["StartifyFooter"] = {
-        ["fg"] = "03",
+    ['StartifyFooter'] = {
+        ['fg'] = '03',
     },
-    ["StartifyHeader"] = {
-        ["fg"] = "0B",
+    ['StartifyHeader'] = {
+        ['fg'] = '0B',
     },
-    ["StartifyNumber"] = {
-        ["fg"] = "09",
+    ['StartifyNumber'] = {
+        ['fg'] = '09',
     },
-    ["StartifyPath"] = {
-        ["fg"] = "03",
+    ['StartifyPath'] = {
+        ['fg'] = '03',
     },
-    ["StartifySection"] = {
-        ["fg"] = "0E",
+    ['StartifySection'] = {
+        ['fg'] = '0E',
     },
-    ["StartifySelect"] = {
-        ["fg"] = "0C",
+    ['StartifySelect'] = {
+        ['fg'] = '0C',
     },
-    ["StartifySlash"] = {
-        ["fg"] = "03",
+    ['StartifySlash'] = {
+        ['fg'] = '03',
     },
-    ["StartifySpecial"] = {
-        ["fg"] = "03",
+    ['StartifySpecial'] = {
+        ['fg'] = '03',
     },
-    ["javaOperator"] = {
-        ["fg"] = "0D",
+    ['javaOperator'] = {
+        ['fg'] = '0D',
     },
     -- Treesitter
-    ["TSFunction"] = {
-        ["fg"] = "05",
+    ['TSFunction'] = {
+        ['fg'] = '05',
     },
-    ["TSConstant"] = {
-        ["fg"] = "05",
+    ['TSConstant'] = {
+        ['fg'] = '05',
     },
-    ["TSConstructor"] = {
-        ["fg"] = "05",
+    ['TSConstructor'] = {
+        ['fg'] = '05',
     },
-    ["TSConditional"] = {
-        ["fg"] = "0E",
+    ['TSConditional'] = {
+        ['fg'] = '0E',
     },
-    ["TSNumber"] = {
-        ["fg"] = "09",
+    ['TSNumber'] = {
+        ['fg'] = '09',
     },
-    ["TSOperator"] = {
-        ["fg"] = "05",
+    ['TSOperator'] = {
+        ['fg'] = '05',
     },
-    ["TSParameter"] = {
-        ["fg"] = "05",
+    ['TSParameter'] = {
+        ['fg'] = '05',
     },
-    ["TSParameterReference"] = {
-        ["fg"] = "05",
+    ['TSParameterReference'] = {
+        ['fg'] = '05',
     },
-    ["TSProperty"] = {
-        ["fg"] = "05",
+    ['TSProperty'] = {
+        ['fg'] = '05',
     },
-    ["TSField"] = {
-        ["fg"] = "05",
+    ['TSField'] = {
+        ['fg'] = '05',
     },
-    ["TSPunctDelimiter"] = {
-        ["fg"] = "05",
+    ['TSPunctDelimiter'] = {
+        ['fg'] = '05',
     },
-    ["TSPunctBracket"] = {
-        ["fg"] = "0D",
+    ['TSPunctBracket'] = {
+        ['fg'] = '0D',
     },
-    ["TSPunctSpecial"] = {
-        ["fg"] = "05",
+    ['TSPunctSpecial'] = {
+        ['fg'] = '05',
     },
-    ["TSRepeat"] = {
-        ["fg"] = "0A",
+    ['TSRepeat'] = {
+        ['fg'] = '0A',
     },
-    ["TSString"] = {
-        ["fg"] = "0B",
+    ['TSString'] = {
+        ['fg'] = '0B',
     },
-    ["TSType"] = {
-        ["fg"] = "05",
+    ['TSType'] = {
+        ['fg'] = '05',
     },
-    ["TSTypeBuiltin"] = {
-        ["fg"] = "05",
+    ['TSTypeBuiltin'] = {
+        ['fg'] = '05',
     },
-    ["TSVariable"] = {
-        ["fg"] = "05",
+    ['TSVariable'] = {
+        ['fg'] = '05',
     },
-    ["TSVariableBuiltin"] = {
-        ["fg"] = "0A",
+    ['TSVariableBuiltin'] = {
+        ['fg'] = '0A',
     },
-    ["TSFloat"] = {
-        ["fg"] = "09",
+    ['TSFloat'] = {
+        ['fg'] = '09',
     },
-    ["TSKeyword"] = {
-        ["fg"] = "0A",
+    ['TSKeyword'] = {
+        ['fg'] = '0A',
     },
-    ["TSKeywordOperator"] = {
-        ["fg"] = "0F",
+    ['TSKeywordOperator'] = {
+        ['fg'] = '0F',
     },
-    ["TSKeywordFunction"] = {
-        ["fg"] = "0E",
+    ['TSKeywordFunction'] = {
+        ['fg'] = '0E',
     },
-    ["TSKeywordReturn"] = {
-        ["fg"] = "08",
-        ["attr"] = "bold",
+    ['TSKeywordReturn'] = {
+        ['fg'] = '08',
+        ['attr'] = 'bold',
     },
-    ["TSMethod"] = {
-        ["fg"] = "05",
+    ['TSMethod'] = {
+        ['fg'] = '05',
     },
-    ["TSNamespace"] = {
-        ["fg"] = "05",
+    ['TSNamespace'] = {
+        ['fg'] = '05',
     },
-    ["TSException"] = {
-        ["fg"] = "0C",
+    ['TSException'] = {
+        ['fg'] = '0C',
     },
-    ["TSInclude"] = {
-        ["fg"] = "0E",
+    ['TSInclude'] = {
+        ['fg'] = '0E',
     },
-    ["TSTag"] = {
-        ["fg"] = "0D",
+    ['TSTag'] = {
+        ['fg'] = '0D',
     },
-    ["TSTagCustom"] = {
-        ["fg"] = "0D",
+    ['TSTagCustom'] = {
+        ['fg'] = '0D',
     },
-    ["TSTagDelimiter"] = {
-        ["fg"] = "0D",
+    ['TSTagDelimiter'] = {
+        ['fg'] = '0D',
     },
-    ["TSTagAttribute"] = {
-        ["fg"] = "0A",
+    ['TSTagAttribute'] = {
+        ['fg'] = '0A',
     },
-    ["TSStatement"] = {
-        ["fg"] = "0A",
+    ['TSStatement'] = {
+        ['fg'] = '0A',
     },
-    ["TSError"] = {
-        ["fg"] = "08",
+    ['TSError'] = {
+        ['fg'] = '08',
     },
     -- AI Suggestions
-    ["AISuggestion"] = {
-        ["fg"] = "02",
+    ['AISuggestion'] = {
+        ['fg'] = '02',
     },
-    ["CopilotAnnotation"] = {
-        ["fg"] = "02",
+    ['CopilotAnnotation'] = {
+        ['fg'] = '02',
     },
-    ["CopilotSuggestion"] = {
-        ["fg"] = "02",
+    ['CopilotSuggestion'] = {
+        ['fg'] = '02',
     },
     -- Treesitter 0.8 or newer
-    ["@function"] = {link = "TSFunction"},
+    ['@function'] = { link = 'TSFunction' },
     -- ["@conceal"] = {link = "Conceal"},
-    ["@constant"] = {link = "TSConstant"},
-    ["@constructor"] = {link = "TSConstructor"},
-    ["@conditional"] = {link = "TSConditional"},
-    ["@number"] = {link = "TSNumber"},
-    ["@operator"] = {link = "TSOperator"},
-    ["@parameter"] = {link = "TSParameter"},
-    ["@parameter.reference"] = {link = "TSParameterReference"},
-    ["@property"] = {link = "TSProperty"},
-    ["@field"] = {link = "TSField"},
-    ["@punctuation.delimiter"] = {link = "TSPunctDelimiter"},
-    ["@punctuation.delimiter.markdown"] = {link = "Delimiter"},
-    ["@punctuation.bracket"] = {link = "TSPunctBracket"},
-    ["@punctuation.special"] = {link = "TSPunctSpecial"},
-    ["@repeat"] = {link = "TSRepeat"},
-    ["@string"] = {link = "TSString"},
+    ['@constant'] = { link = 'TSConstant' },
+    ['@constructor'] = { link = 'TSConstructor' },
+    ['@conditional'] = { link = 'TSConditional' },
+    ['@number'] = { link = 'TSNumber' },
+    ['@operator'] = { link = 'TSOperator' },
+    ['@parameter'] = { link = 'TSParameter' },
+    ['@parameter.reference'] = { link = 'TSParameterReference' },
+    ['@property'] = { link = 'TSProperty' },
+    ['@field'] = { link = 'TSField' },
+    ['@punctuation.delimiter'] = { link = 'TSPunctDelimiter' },
+    ['@punctuation.delimiter.markdown'] = { link = 'Delimiter' },
+    ['@punctuation.bracket'] = { link = 'TSPunctBracket' },
+    ['@punctuation.special'] = { link = 'TSPunctSpecial' },
+    ['@repeat'] = { link = 'TSRepeat' },
+    ['@string'] = { link = 'TSString' },
     -- ["@spell"] = {link = "Underlined"},
-    ["@type"] = {link = "TSType"},
-    ["@text.todo"] = {link = "Normal"},
-    ["@type.builtin"] = {link = "TSTypeBuiltin"},
-    ["@variable"] = {link = "TSVariable"},
-    ["@variable.builtin"] = {link = "TSVariableBuiltin"},
-    ["@float"] = {link = "TSFloat"},
-    ["@keyword"] = {link = "TSKeyword"},
-    ["@keyword.operator"] = {link = "TSKeywordOperator"},
-    ["@keyword.function"] = {link = "TSKeywordFunction"},
-    ["@keyword.return"] = {link = "TSKeywordReturn"},
-    ["@method"] = {link = "TSMethod"},
-    ["@namespace"] = {link = "TSNamespace"},
-    ["@exception"] = {link = "TSException"},
-    ["@include"] = {link = "TSInclude"},
-    ["@text.title"] = {link = "Title"},
-    ["@text.literal"] = {link = "String"},
-    ["@text.strong"] = {link = "Bold"},
-    ["@text.strike"] = {link = "Comment"},
-    ["@text.quote"] = {fg = "04"},
-    ["@text.emphasis"] = {link = "Italic"},
-    ["@text.uri"] = {link = "String"},
-    ["@text.reference"] = {fg = "08"},
-    ["@tag"] = {link = "TSTag"},
-    ["@tag.custom"] = {link = "TSTagCustom"},
-    ["@tag.delimiter"] = {link = "TSTagDelimiter"},
-    ["@tag.attribute"] = {link = "TSTagAttribute"},
-    ["@statement"] = {link = "TSStatement"},
-    ["@error"] = {link = "TSError"},
+    ['@type'] = { link = 'TSType' },
+    ['@text.todo'] = { link = 'Normal' },
+    ['@type.builtin'] = { link = 'TSTypeBuiltin' },
+    ['@variable'] = { link = 'TSVariable' },
+    ['@variable.builtin'] = { link = 'TSVariableBuiltin' },
+    ['@float'] = { link = 'TSFloat' },
+    ['@keyword'] = { link = 'TSKeyword' },
+    ['@keyword.operator'] = { link = 'TSKeywordOperator' },
+    ['@keyword.function'] = { link = 'TSKeywordFunction' },
+    ['@keyword.return'] = { link = 'TSKeywordReturn' },
+    ['@method'] = { link = 'TSMethod' },
+    ['@namespace'] = { link = 'TSNamespace' },
+    ['@exception'] = { link = 'TSException' },
+    ['@include'] = { link = 'TSInclude' },
+    ['@text.title'] = { link = 'Title' },
+    ['@text.literal'] = { link = 'String' },
+    ['@text.strong'] = { link = 'Bold' },
+    ['@text.strike'] = { link = 'Comment' },
+    ['@text.quote'] = { fg = '04' },
+    ['@text.emphasis'] = { link = 'Italic' },
+    ['@text.uri'] = { link = 'String' },
+    ['@text.reference'] = { fg = '08' },
+    ['@tag'] = { link = 'TSTag' },
+    ['@tag.custom'] = { link = 'TSTagCustom' },
+    ['@tag.delimiter'] = { link = 'TSTagDelimiter' },
+    ['@tag.attribute'] = { link = 'TSTagAttribute' },
+    ['@statement'] = { link = 'TSStatement' },
+    ['@error'] = { link = 'TSError' },
 }
 
 for group, settings in pairs(groups) do
