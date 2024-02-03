@@ -10,7 +10,7 @@ local theme = {
     ['07'] = { ['gui'] = t.color07, ['cterm'] = 254, ['name'] = 'White' },
     ['08'] = { ['gui'] = t.color08, ['cterm'] = 160, ['name'] = 'Red' },
     ['09'] = { ['gui'] = t.color09, ['cterm'] = 136, ['name'] = 'Orange' },
-    ['0A'] = { ['gui'] = t.color0A, ['cterm'] = 184, ['name'] = 'Yellow' },
+    ['0A'] = { ['gui'] = t.color0A, ['cterm'] = 3, ['name'] = 'Yellow' },
     ['0B'] = { ['gui'] = t.color0B, ['cterm'] = 144, ['name'] = 'LightGreen' },
     ['0C'] = { ['gui'] = t.color0C, ['cterm'] = 3, ['name'] = 'LightBlue' },
     ['0D'] = { ['gui'] = t.color0D, ['cterm'] = 12, ['name'] = 'Blue' },
