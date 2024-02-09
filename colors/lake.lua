@@ -817,6 +817,8 @@ local groups = {
     ['@variable.builtin'] = { link = 'TSVariableBuiltin' },
     ['@float'] = { link = 'TSFloat' },
     ['@keyword'] = { link = 'TSKeyword' },
+    ['@keyword.conditional'] = { link = 'Conditional' },
+    ['@keyword.conditional.tsx'] = { link = 'Conditional' },
     ['@keyword.operator'] = { link = 'TSKeywordOperator' },
     ['@keyword.function'] = { link = 'TSKeywordFunction' },
     ['@keyword.return'] = { link = 'TSKeywordReturn' },
