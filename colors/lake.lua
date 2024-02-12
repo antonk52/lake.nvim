@@ -809,6 +809,7 @@ local groups = {
     ['@punctuation.special'] = { link = 'TSPunctSpecial' },
     ['@repeat'] = { link = 'TSRepeat' },
     ['@string'] = { link = 'TSString' },
+    ['@string.special.url'] = { link = 'TSString' },
     -- ["@spell"] = {link = "Underlined"},
     ['@type'] = { link = 'TSType' },
     ['@text.todo'] = { link = 'Normal' },
@@ -840,6 +841,14 @@ local groups = {
     ['@tag.attribute'] = { link = 'TSTagAttribute' },
     ['@statement'] = { link = 'TSStatement' },
     ['@error'] = { link = 'TSError' },
+    ['@label'] = { link = 'Normal' },
+    ['@markup.link'] = { link = 'Normal' },
+    ['@markup.link.label'] = { fg = '08' },
+    ['@markup.link.url'] = { link = 'String' },
+    ['@markup.list'] = { link = 'Normal' },
+    ['@markup.raw'] = { link = 'String' },
+    ['@markup.raw.block'] = { link = 'Normal' },
+    ['@markup.raw.delimeter'] = { link = 'Normal' },
 }
 
 for group, settings in pairs(groups) do
