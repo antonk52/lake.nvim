@@ -73,7 +73,7 @@ local groups = {
         ['bg'] = '09',
     },
     ['Italic'] = {
-        ['attr'] = 'italic',
+        italic = true,
     },
     ['Macro'] = {
         ['fg'] = '05',
@@ -842,13 +842,17 @@ local groups = {
     ['@statement'] = { link = 'TSStatement' },
     ['@error'] = { link = 'TSError' },
     ['@label'] = { link = 'Normal' },
+    ['@markup.heading'] = { link = 'Title' },
+    ['@markup.italic'] = { link = 'Italic' },
     ['@markup.link'] = { link = 'Normal' },
     ['@markup.link.label'] = { fg = '08' },
     ['@markup.link.url'] = { link = 'String' },
     ['@markup.list'] = { link = 'Normal' },
+    ['@markup.quote'] = { link = '@text.quote' },
     ['@markup.raw'] = { link = 'String' },
     ['@markup.raw.block'] = { link = 'Normal' },
     ['@markup.raw.delimeter'] = { link = 'Normal' },
+    ['@markup.strong'] = { link = 'Bold' },
 }
 
 for group, settings in pairs(groups) do
