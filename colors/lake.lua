@@ -836,6 +836,7 @@ local groups = {
     ['@text.uri'] = { link = 'String' },
     ['@text.reference'] = { fg = '08' },
     ['@tag'] = { link = 'TSTag' },
+    ['@tag.builtin'] = { link = 'TSTag' },
     ['@tag.custom'] = { link = 'TSTagCustom' },
     ['@tag.delimiter'] = { link = 'TSTagDelimiter' },
     ['@tag.attribute'] = { link = 'TSTagAttribute' },
