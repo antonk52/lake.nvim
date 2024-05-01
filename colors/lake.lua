@@ -823,6 +823,7 @@ local groups = {
     ['@keyword.operator'] = { link = 'TSKeywordOperator' },
     ['@keyword.function'] = { link = 'TSKeywordFunction' },
     ['@keyword.return'] = { link = 'TSKeywordReturn' },
+    ['@markup.strikethrough'] = { link = 'Conceal' },
     ['@method'] = { link = 'TSMethod' },
     ['@namespace'] = { link = 'TSNamespace' },
     ['@exception'] = { link = 'TSException' },
