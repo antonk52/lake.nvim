@@ -193,6 +193,21 @@ local groups = {
         ['fg'] = '0B',
         ['bg'] = '01',
     },
+    ['DiagnosticInfo'] = {
+        ['fg'] = '0C',
+    },
+    ['DiagnosticHint'] = {
+        ['fg'] = '0C',
+    },
+    ['DiagnosticWarn'] = {
+        ['fg'] = '0A',
+    },
+    ['DiagnosticError'] = {
+        ['fg'] = '08',
+    },
+    ['DiagnosticOk'] = {
+        ['fg'] = '0B',
+    },
     -- Builtin
     ['Boolean'] = {
         ['fg'] = '09',
