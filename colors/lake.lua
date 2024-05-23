@@ -34,273 +34,273 @@ vim.o.termguicolors = true
 
 local groups = {
     -- Base
-    ['Normal'] = {
-        ['fg'] = '05',
-        ['bg'] = '00',
+    Normal = {
+        fg = '05',
+        bg = '00',
     },
-    ['NormalNC'] = { link = 'ColorColumn' },
-    ['NormalFloat'] = { link = 'Normal' },
-    ['Bold'] = {
-        ['attr'] = 'bold',
+    NormalNC = { link = 'ColorColumn' },
+    NormalFloat = { link = 'Normal' },
+    Bold = {
+        attr = 'bold',
     },
-    ['Debug'] = {
-        ['fg'] = '08',
+    Debug = {
+        fg = '08',
     },
-    ['Directory'] = {
-        ['fg'] = '0D',
+    Directory = {
+        fg = '0D',
     },
-    ['Error'] = {
-        ['fg'] = '00',
-        ['bg'] = '08',
+    Error = {
+        fg = '00',
+        bg = '08',
     },
-    ['ErrorMsg'] = {
-        ['fg'] = '08',
-        ['bg'] = '00',
+    ErrorMsg = {
+        fg = '08',
+        bg = '00',
     },
-    ['Exception'] = {
-        ['fg'] = '08',
+    Exception = {
+        fg = '08',
     },
-    ['FoldColumn'] = {
-        ['fg'] = '0C',
-        ['bg'] = '01',
+    FoldColumn = {
+        fg = '0C',
+        bg = '01',
     },
-    ['Folded'] = {
-        ['fg'] = '03',
-        ['bg'] = '01',
+    Folded = {
+        fg = '03',
+        bg = '01',
     },
-    ['IncSearch'] = {
-        ['fg'] = '01',
-        ['bg'] = '09',
+    IncSearch = {
+        fg = '01',
+        bg = '09',
     },
-    ['Italic'] = {
+    Italic = {
         italic = true,
     },
-    ['Macro'] = {
-        ['fg'] = '05',
+    Macro = {
+        fg = '05',
     },
-    ['MatchParen'] = {
-        ['bg'] = '03',
+    MatchParen = {
+        bg = '03',
     },
-    ['ModeMsg'] = {
-        ['fg'] = '0B',
+    ModeMsg = {
+        fg = '0B',
     },
-    ['MoreMsg'] = {
-        ['fg'] = '0B',
+    MoreMsg = {
+        fg = '0B',
     },
-    ['Question'] = {
-        ['fg'] = '0D',
+    Question = {
+        fg = '0D',
     },
-    ['Search'] = {
-        ['fg'] = '01',
-        ['bg'] = '0A',
+    Search = {
+        fg = '01',
+        bg = '0A',
     },
-    ['Substitute'] = {
-        ['fg'] = '01',
-        ['bg'] = '0A',
+    Substitute = {
+        fg = '01',
+        bg = '0A',
     },
-    ['SpecialKey'] = {
-        ['fg'] = '03',
+    SpecialKey = {
+        fg = '03',
     },
-    ['TooLong'] = {
-        ['fg'] = '08',
+    TooLong = {
+        fg = '08',
     },
-    ['Underlined'] = {
-        ['fg'] = '08',
+    Underlined = {
+        fg = '08',
     },
-    ['Visual'] = {
-        ['bg'] = '02',
+    Visual = {
+        bg = '02',
     },
-    ['VisualNOS'] = {
-        ['fg'] = '08',
+    VisualNOS = {
+        fg = '08',
     },
-    ['WarningMsg'] = {
-        ['fg'] = '08',
+    WarningMsg = {
+        fg = '08',
     },
-    ['WildMenu'] = {
-        ['fg'] = '08',
-        ['bg'] = '0A',
+    WildMenu = {
+        fg = '08',
+        bg = '0A',
     },
-    ['WinSeparator'] = {
-        ['fg'] = '02',
+    WinSeparator = {
+        fg = '02',
     },
-    ['Title'] = {
-        ['fg'] = '0D',
+    Title = {
+        fg = '0D',
     },
-    ['Conceal'] = {
-        ['fg'] = '0D',
-        ['bg'] = '00',
+    Conceal = {
+        fg = '0D',
+        bg = '00',
     },
-    ['Cursor'] = {
-        ['fg'] = '00',
-        ['bg'] = '05',
+    Cursor = {
+        fg = '00',
+        bg = '05',
     },
-    ['NonText'] = {
-        ['fg'] = '03',
+    NonText = {
+        fg = '03',
     },
-    ['LineNr'] = {
-        ['fg'] = '03',
-        ['bg'] = '01',
+    LineNr = {
+        fg = '03',
+        bg = '01',
     },
-    ['SignColumn'] = {
-        ['fg'] = '03',
-        ['bg'] = '01',
+    SignColumn = {
+        fg = '03',
+        bg = '01',
     },
-    ['StatusLine'] = {
-        ['fg'] = '04',
-        ['bg'] = '02',
+    StatusLine = {
+        fg = '04',
+        bg = '02',
     },
-    ['StatusLineNC'] = {
-        ['fg'] = '03',
-        ['bg'] = '01',
+    StatusLineNC = {
+        fg = '03',
+        bg = '01',
     },
-    ['VertSplit'] = {
-        ['fg'] = '02',
-        ['bg'] = '02',
+    VertSplit = {
+        fg = '02',
+        bg = '02',
     },
-    ['ColorColumn'] = {
-        ['bg'] = '01',
+    ColorColumn = {
+        bg = '01',
     },
-    ['CursorColumn'] = {
-        ['bg'] = '01',
+    CursorColumn = {
+        bg = '01',
     },
-    ['CursorLine'] = {
-        ['bg'] = '01',
+    CursorLine = {
+        bg = '01',
     },
-    ['CursorLineNr'] = {
-        ['fg'] = '04',
-        ['bg'] = '01',
+    CursorLineNr = {
+        fg = '04',
+        bg = '01',
     },
-    ['QuickFixLine'] = {
-        ['bg'] = '01',
+    QuickFixLine = {
+        bg = '01',
     },
-    ['PMenu'] = {
-        ['fg'] = '05',
-        ['bg'] = '01',
+    PMenu = {
+        fg = '05',
+        bg = '01',
     },
-    ['PMenuSel'] = {
-        ['fg'] = '01',
-        ['bg'] = '05',
+    PMenuSel = {
+        fg = '01',
+        bg = '05',
     },
-    ['TabLine'] = {
-        ['fg'] = '03',
-        ['bg'] = '01',
+    TabLine = {
+        fg = '03',
+        bg = '01',
     },
-    ['TabLineFill'] = {
-        ['fg'] = '03',
-        ['bg'] = '01',
+    TabLineFill = {
+        fg = '03',
+        bg = '01',
     },
-    ['TabLineSel'] = {
-        ['fg'] = '0B',
-        ['bg'] = '01',
+    TabLineSel = {
+        fg = '0B',
+        bg = '01',
     },
-    ['DiagnosticInfo'] = {
-        ['fg'] = '0C',
+    DiagnosticInfo = {
+        fg = '0C',
     },
-    ['DiagnosticHint'] = {
-        ['fg'] = '0C',
+    DiagnosticHint = {
+        fg = '0C',
     },
-    ['DiagnosticWarn'] = {
-        ['fg'] = '0A',
+    DiagnosticWarn = {
+        fg = '0A',
     },
-    ['DiagnosticError'] = {
-        ['fg'] = '08',
+    DiagnosticError = {
+        fg = '08',
     },
-    ['DiagnosticOk'] = {
-        ['fg'] = '0B',
+    DiagnosticOk = {
+        fg = '0B',
     },
     -- Builtin
-    ['Boolean'] = {
-        ['fg'] = '09',
+    Boolean = {
+        fg = '09',
     },
-    ['Character'] = {
-        ['fg'] = '08',
+    Character = {
+        fg = '08',
     },
-    ['Comment'] = {
-        ['fg'] = '03',
+    Comment = {
+        fg = '03',
     },
-    ['Conditional'] = {
-        ['fg'] = '0E',
+    Conditional = {
+        fg = '0E',
     },
-    ['Constant'] = {
-        ['fg'] = '05',
+    Constant = {
+        fg = '05',
     },
-    ['Define'] = {
-        ['fg'] = '0E',
+    Define = {
+        fg = '0E',
     },
-    ['Delimiter'] = {
-        ['fg'] = '0F',
+    Delimiter = {
+        fg = '0F',
     },
-    ['Float'] = {
-        ['fg'] = '09',
+    Float = {
+        fg = '09',
     },
-    ['Function'] = {
-        ['fg'] = '0D',
+    Function = {
+        fg = '0D',
     },
-    ['Identifier'] = {
-        ['fg'] = '05',
+    Identifier = {
+        fg = '05',
     },
-    ['Include'] = {
-        ['fg'] = '0D',
+    Include = {
+        fg = '0D',
     },
-    ['Keyword'] = {
-        ['fg'] = '05',
+    Keyword = {
+        fg = '05',
     },
-    ['Label'] = {
-        ['fg'] = '0A',
+    Label = {
+        fg = '0A',
     },
-    ['Number'] = {
-        ['fg'] = '09',
+    Number = {
+        fg = '09',
     },
-    ['Operator'] = {
-        ['fg'] = '05',
+    Operator = {
+        fg = '05',
     },
-    ['PreProc'] = {
-        ['fg'] = '0A',
+    PreProc = {
+        fg = '0A',
     },
-    ['Repeat'] = {
-        ['fg'] = '0A',
+    Repeat = {
+        fg = '0A',
     },
-    ['Special'] = {
-        ['fg'] = '0A',
+    Special = {
+        fg = '0A',
     },
-    ['SpecialChar'] = {
-        ['fg'] = '0F',
+    SpecialChar = {
+        fg = '0F',
     },
-    ['Statement'] = {
-        ['fg'] = '08',
+    Statement = {
+        fg = '08',
     },
-    ['StorageClass'] = {
-        ['fg'] = '0A',
+    StorageClass = {
+        fg = '0A',
     },
-    ['String'] = {
-        ['fg'] = '0B',
+    String = {
+        fg = '0B',
     },
-    ['Structure'] = {
-        ['fg'] = '0E',
+    Structure = {
+        fg = '0E',
     },
-    ['Tag'] = {
-        ['fg'] = '0A',
+    Tag = {
+        fg = '0A',
     },
-    ['Todo'] = {
-        ['fg'] = '0A',
-        ['bg'] = '01',
+    Todo = {
+        fg = '0A',
+        bg = '01',
     },
-    ['Type'] = {
-        ['fg'] = '0A',
+    Type = {
+        fg = '0A',
     },
-    ['Typedef'] = {
-        ['fg'] = '0A',
+    Typedef = {
+        fg = '0A',
     },
 
     -- AI Suggestions
-    ['AISuggestion'] = {
-        ['fg'] = '02',
+    AISuggestion = {
+        fg = '02',
     },
-    ['CopilotAnnotation'] = {
-        ['fg'] = '02',
+    CopilotAnnotation = {
+        fg = '02',
     },
-    ['CopilotSuggestion'] = {
-        ['fg'] = '02',
+    CopilotSuggestion = {
+        fg = '02',
     },
 
     -- Treesitter 0.8 or newer
