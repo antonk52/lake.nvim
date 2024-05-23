@@ -20,7 +20,7 @@ local theme = {
 
 vim.g.lake_palette = theme
 
-if vim.version().minor < 7 then
+if vim.fn.has('nvim-0.7.0') ~= 1 then
     vim.notify_once('lake requires neovim v0.7 or newer')
     return
 end
@@ -30,288 +30,113 @@ if vim.g.colors_name then
 end
 
 vim.g.colors_name = 'lake'
-vim.o.termguicolors = true
 
 local groups = {
-    -- Base
-    Normal = {
-        fg = '05',
-        bg = '00',
-    },
+    Normal = { fg = '05', bg = '00' },
     NormalNC = { link = 'ColorColumn' },
     NormalFloat = { link = 'Normal' },
-    Bold = {
-        attr = 'bold',
-    },
-    Debug = {
-        fg = '08',
-    },
-    Directory = {
-        fg = '0D',
-    },
-    Error = {
-        fg = '00',
-        bg = '08',
-    },
-    ErrorMsg = {
-        fg = '08',
-        bg = '00',
-    },
-    Exception = {
-        fg = '08',
-    },
-    FoldColumn = {
-        fg = '0C',
-        bg = '01',
-    },
-    Folded = {
-        fg = '03',
-        bg = '01',
-    },
-    IncSearch = {
-        fg = '01',
-        bg = '09',
-    },
-    Italic = {
-        italic = true,
-    },
-    Macro = {
-        fg = '05',
-    },
-    MatchParen = {
-        bg = '03',
-    },
-    ModeMsg = {
-        fg = '0B',
-    },
-    MoreMsg = {
-        fg = '0B',
-    },
-    Question = {
-        fg = '0D',
-    },
-    Search = {
-        fg = '01',
-        bg = '0A',
-    },
-    Substitute = {
-        fg = '01',
-        bg = '0A',
-    },
-    SpecialKey = {
-        fg = '03',
-    },
-    TooLong = {
-        fg = '08',
-    },
-    Underlined = {
-        fg = '08',
-    },
-    Visual = {
-        bg = '02',
-    },
-    VisualNOS = {
-        fg = '08',
-    },
-    WarningMsg = {
-        fg = '08',
-    },
-    WildMenu = {
-        fg = '08',
-        bg = '0A',
-    },
-    WinSeparator = {
-        fg = '02',
-    },
-    Title = {
-        fg = '0D',
-    },
-    Conceal = {
-        fg = '0D',
-        bg = '00',
-    },
-    Cursor = {
-        fg = '00',
-        bg = '05',
-    },
-    NonText = {
-        fg = '03',
-    },
-    LineNr = {
-        fg = '03',
-        bg = '01',
-    },
-    SignColumn = {
-        fg = '03',
-        bg = '01',
-    },
-    StatusLine = {
-        fg = '04',
-        bg = '02',
-    },
-    StatusLineNC = {
-        fg = '03',
-        bg = '01',
-    },
-    VertSplit = {
-        fg = '02',
-        bg = '02',
-    },
-    ColorColumn = {
-        bg = '01',
-    },
-    CursorColumn = {
-        bg = '01',
-    },
-    CursorLine = {
-        bg = '01',
-    },
-    CursorLineNr = {
-        fg = '04',
-        bg = '01',
-    },
-    QuickFixLine = {
-        bg = '01',
-    },
-    PMenu = {
-        fg = '05',
-        bg = '01',
-    },
-    PMenuSel = {
-        fg = '01',
-        bg = '05',
-    },
-    TabLine = {
-        fg = '03',
-        bg = '01',
-    },
-    TabLineFill = {
-        fg = '03',
-        bg = '01',
-    },
-    TabLineSel = {
-        fg = '0B',
-        bg = '01',
-    },
-    DiagnosticInfo = {
-        fg = '0C',
-    },
-    DiagnosticHint = {
-        fg = '0C',
-    },
-    DiagnosticWarn = {
-        fg = '0A',
-    },
-    DiagnosticError = {
-        fg = '08',
-    },
-    DiagnosticOk = {
-        fg = '0B',
-    },
-    -- Builtin
-    Boolean = {
-        fg = '09',
-    },
-    Character = {
-        fg = '08',
-    },
-    Comment = {
-        fg = '03',
-    },
-    Conditional = {
-        fg = '0E',
-    },
-    Constant = {
-        fg = '05',
-    },
-    Define = {
-        fg = '0E',
-    },
-    Delimiter = {
-        fg = '0F',
-    },
-    Float = {
-        fg = '09',
-    },
-    Function = {
-        fg = '0D',
-    },
-    Identifier = {
-        fg = '05',
-    },
-    Include = {
-        fg = '0D',
-    },
-    Keyword = {
-        fg = '05',
-    },
-    Label = {
-        fg = '0A',
-    },
-    Number = {
-        fg = '09',
-    },
-    Operator = {
-        fg = '05',
-    },
-    PreProc = {
-        fg = '0A',
-    },
-    Repeat = {
-        fg = '0A',
-    },
-    Special = {
-        fg = '0A',
-    },
-    SpecialChar = {
-        fg = '0F',
-    },
-    Statement = {
-        fg = '08',
-    },
-    StorageClass = {
-        fg = '0A',
-    },
-    String = {
-        fg = '0B',
-    },
-    Structure = {
-        fg = '0E',
-    },
-    Tag = {
-        fg = '0A',
-    },
-    Todo = {
-        fg = '0A',
-        bg = '01',
-    },
-    Type = {
-        fg = '0A',
-    },
-    Typedef = {
-        fg = '0A',
-    },
+    Bold = { bold = true },
+    Debug = { fg = '08' },
+    Directory = { fg = '0D' },
+    Error = { fg = '00', bg = '08' },
+    ErrorMsg = { fg = '08', bg = '00' },
+    Exception = { fg = '08' },
+    FoldColumn = { fg = '0C', bg = '01' },
+    Folded = { fg = '03', bg = '01' },
+    IncSearch = { fg = '01', bg = '09' },
+    Italic = { italic = true },
+    Macro = { fg = '05' },
+    MatchParen = { bg = '03' },
+    ModeMsg = { fg = '0B' },
+    MoreMsg = { fg = '0B' },
+    Question = { fg = '0D' },
+    Search = { fg = '01', bg = '0A' },
+    Substitute = { fg = '01', bg = '0A' },
+    SpecialKey = { fg = '03' },
+    TooLong = { fg = '08' },
+    Underlined = { fg = '08' },
+    Visual = { bg = '02' },
+    VisualNOS = { fg = '08' },
+    WarningMsg = { fg = '08' },
+    WildMenu = { fg = '08', bg = '0A' },
+    WinSeparator = { fg = '02' },
+    Title = { fg = '0D' },
+    Conceal = { fg = '0D', bg = '00' },
+    Cursor = { fg = '00', bg = '05' },
+    NonText = { fg = '03' },
+    LineNr = { fg = '03', bg = '01' },
+    SignColumn = { fg = '03', bg = '01' },
+    StatusLine = { fg = '04', bg = '02' },
+    StatusLineNC = { fg = '03', bg = '01' },
+    VertSplit = { fg = '02', bg = '02' },
+    ColorColumn = { bg = '01' },
+    CursorColumn = { bg = '01' },
+    CursorLine = { bg = '01' },
+    CursorLineNr = { fg = '04', bg = '01' },
+    QuickFixLine = { bg = '01' },
+    PMenu = { fg = '05', bg = '01' },
+    PMenuSel = { fg = '01', bg = '05' },
+    TabLine = { fg = '03', bg = '01' },
+    TabLineFill = { fg = '03', bg = '01' },
+    TabLineSel = { fg = '0B', bg = '01' },
+
+    DiagnosticInfo = { fg = '0C' },
+    DiagnosticHint = { fg = '0C' },
+    DiagnosticWarn = { fg = '0A' },
+    DiagnosticError = { fg = '08' },
+    DiagnosticOk = { fg = '0B' },
+
+    DiffAdd = { fg = '0B', bg = '01' },
+    DiffChange = { fg = '03', bg = '01' },
+    DiffDelete = { fg = '08', bg = '01' },
+    DiffText = { fg = '0D', bg = '01' },
+    DiffAdded = { fg = '0B', bg = '00' },
+    DiffFile = { fg = '08', bg = '00' },
+    DiffNewFile = { fg = '0B', bg = '00' },
+    DiffLine = { fg = '0D', bg = '00' },
+    DiffRemoved = { fg = '08', bg = '00' },
+
+    Boolean = { fg = '09' },
+    Character = { fg = '08' },
+    Comment = { fg = '03' },
+    Conditional = { fg = '0E' },
+    Constant = { fg = '05' },
+    Define = { fg = '0E' },
+    Delimiter = { fg = '0F' },
+    Float = { fg = '09' },
+    Function = { fg = '0E' },
+    Identifier = { fg = '05' },
+    Include = { fg = '0D' },
+    Keyword = { fg = '05' },
+    Label = { fg = '0A' },
+    Number = { fg = '09' },
+    Operator = { fg = '05' },
+    PreProc = { fg = '0A' },
+    Repeat = { fg = '0A' },
+    Special = { fg = '0A' },
+    SpecialChar = { fg = '0F' },
+    Statement = { fg = '08' },
+    StorageClass = { fg = '0A' },
+    String = { fg = '0B' },
+    Structure = { fg = '0E' },
+    Tag = { fg = '0A' },
+    Todo = { fg = '0A', bg = '01' },
+    Type = { fg = '0A' },
+    Typedef = { fg = '0A' },
 
     -- AI Suggestions
-    AISuggestion = {
-        fg = '02',
-    },
-    CopilotAnnotation = {
-        fg = '02',
-    },
-    CopilotSuggestion = {
-        fg = '02',
-    },
+    AISuggestion = { fg = '02' },
+    CopilotAnnotation = { fg = '02' },
+    CopilotSuggestion = { fg = '02' },
 
     -- Treesitter 0.8 or newer
     ['@function'] = { fg = '05' },
-    -- ["@conceal"] = {link = "Conceal"},
+    ['@function.builtin'] = { link = 'Special' },
     ['@constant'] = { link = 'Constant' },
     ['@constructor'] = { fg = '05' },
     ['@conditional'] = { link = 'Conditional' },
-    ['@number'] = { link = 'Number' },
-    ['@operator'] = { fg = '05', },
-    ['@parameter'] = { fg = '05', },
+    ['@operator'] = { fg = '05' },
+    ['@parameter'] = { fg = '05' },
     ['@parameter.reference'] = { fg = '05' },
     ['@property'] = { fg = '05' },
     ['@field'] = { fg = '05' },
@@ -319,22 +144,20 @@ local groups = {
     ['@punctuation.delimiter.markdown'] = { link = 'Delimiter' },
     ['@punctuation.bracket'] = { fg = '0D' },
     ['@punctuation.special'] = { fg = '05' },
-    ['@repeat'] = { fg = '0A' },
-    ['@string'] = { link = 'String' },
+    ['@repeat'] = { link = 'Repeat' },
     ['@string.special.url'] = { link = 'String' },
-    -- ["@spell"] = {link = "Underlined"},
     ['@type'] = { fg = '05' },
     ['@text.todo'] = { link = 'Normal' },
     ['@type.builtin'] = { fg = '05' },
     ['@variable'] = { fg = '05' },
-    ['@variable.builtin'] =  { fg = '0A' },
+    ['@variable.builtin'] = { fg = '0A' },
     ['@float'] = { fg = '09' },
     ['@keyword'] = { fg = '0A' },
     ['@keyword.conditional'] = { link = 'Conditional' },
     ['@keyword.conditional.tsx'] = { link = 'Conditional' },
     ['@keyword.operator'] = { fg = '0F' },
     ['@keyword.function'] = { fg = '0E' },
-    ['@keyword.return'] =  { fg = '08', attr = 'bold' },
+    ['@keyword.return'] = { fg = '08', bold = true },
     ['@markup.strikethrough'] = { link = 'Conceal' },
     ['@method'] = { fg = '05' },
     ['@namespace'] =  { fg = '05' },
@@ -369,27 +192,14 @@ local groups = {
     ['@markup.strong'] = { link = 'Bold' },
 }
 
-for group, settings in pairs(groups) do
-    local opts = {}
-    if settings.fg ~= nil then
-        opts.fg = theme[settings.fg].gui
-        opts.ctermfg = theme[settings.fg].cterm
+for group, opts in pairs(groups) do
+    if opts.fg then
+        opts.ctermfg = theme[opts.fg].cterm
+        opts.fg = theme[opts.fg].gui
     end
-    if settings.bg ~= nil then
-        opts.bg = theme[settings.bg].gui
-        opts.ctermbg = theme[settings.bg].cterm
-    end
-    if settings.attr == 'bold' then
-        opts.bold = true
-    end
-    if settings.attr == 'undercurl' then
-        opts.undercurl = true
-    end
-    if settings.attr == 'italic' then
-        opts.italic = true
-    end
-    if settings.link then
-        opts.link = settings.link
+    if opts.bg then
+        opts.ctermbg = theme[opts.bg].cterm
+        opts.bg = theme[opts.bg].gui
     end
     vim.api.nvim_set_hl(0, group, opts)
 end
