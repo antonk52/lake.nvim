@@ -291,6 +291,7 @@ local groups = {
     ['Typedef'] = {
         ['fg'] = '0A',
     },
+
     -- C
     ['cOperator'] = {
         ['fg'] = '0C',
@@ -692,110 +693,7 @@ local groups = {
     ['javaOperator'] = {
         ['fg'] = '0D',
     },
-    -- Treesitter
-    ['TSFunction'] = {
-        ['fg'] = '05',
-    },
-    ['TSConstant'] = {
-        ['fg'] = '05',
-    },
-    ['TSConstructor'] = {
-        ['fg'] = '05',
-    },
-    ['TSConditional'] = {
-        ['fg'] = '0E',
-    },
-    ['TSNumber'] = {
-        ['fg'] = '09',
-    },
-    ['TSOperator'] = {
-        ['fg'] = '05',
-    },
-    ['TSParameter'] = {
-        ['fg'] = '05',
-    },
-    ['TSParameterReference'] = {
-        ['fg'] = '05',
-    },
-    ['TSProperty'] = {
-        ['fg'] = '05',
-    },
-    ['TSField'] = {
-        ['fg'] = '05',
-    },
-    ['TSPunctDelimiter'] = {
-        ['fg'] = '05',
-    },
-    ['TSPunctBracket'] = {
-        ['fg'] = '0D',
-    },
-    ['TSPunctSpecial'] = {
-        ['fg'] = '05',
-    },
-    ['TSRepeat'] = {
-        ['fg'] = '0A',
-    },
-    ['TSString'] = {
-        ['fg'] = '0B',
-    },
-    ['TSType'] = {
-        ['fg'] = '05',
-    },
-    ['TSTypeBuiltin'] = {
-        ['fg'] = '05',
-    },
-    ['TSVariable'] = {
-        ['fg'] = '05',
-    },
-    ['TSVariableBuiltin'] = {
-        ['fg'] = '0A',
-    },
-    ['TSFloat'] = {
-        ['fg'] = '09',
-    },
-    ['TSKeyword'] = {
-        ['fg'] = '0A',
-    },
-    ['TSKeywordOperator'] = {
-        ['fg'] = '0F',
-    },
-    ['TSKeywordFunction'] = {
-        ['fg'] = '0E',
-    },
-    ['TSKeywordReturn'] = {
-        ['fg'] = '08',
-        ['attr'] = 'bold',
-    },
-    ['TSMethod'] = {
-        ['fg'] = '05',
-    },
-    ['TSNamespace'] = {
-        ['fg'] = '05',
-    },
-    ['TSException'] = {
-        ['fg'] = '0C',
-    },
-    ['TSInclude'] = {
-        ['fg'] = '0E',
-    },
-    ['TSTag'] = {
-        ['fg'] = '0D',
-    },
-    ['TSTagCustom'] = {
-        ['fg'] = '0D',
-    },
-    ['TSTagDelimiter'] = {
-        ['fg'] = '0D',
-    },
-    ['TSTagAttribute'] = {
-        ['fg'] = '0A',
-    },
-    ['TSStatement'] = {
-        ['fg'] = '0A',
-    },
-    ['TSError'] = {
-        ['fg'] = '08',
-    },
+
     -- AI Suggestions
     ['AISuggestion'] = {
         ['fg'] = '02',
@@ -807,42 +705,42 @@ local groups = {
         ['fg'] = '02',
     },
     -- Treesitter 0.8 or newer
-    ['@function'] = { link = 'TSFunction' },
+    ['@function'] = { fg = '05' },
     -- ["@conceal"] = {link = "Conceal"},
-    ['@constant'] = { link = 'TSConstant' },
-    ['@constructor'] = { link = 'TSConstructor' },
-    ['@conditional'] = { link = 'TSConditional' },
-    ['@number'] = { link = 'TSNumber' },
-    ['@operator'] = { link = 'TSOperator' },
-    ['@parameter'] = { link = 'TSParameter' },
-    ['@parameter.reference'] = { link = 'TSParameterReference' },
-    ['@property'] = { link = 'TSProperty' },
-    ['@field'] = { link = 'TSField' },
-    ['@punctuation.delimiter'] = { link = 'TSPunctDelimiter' },
+    ['@constant'] = { link = 'Constant' },
+    ['@constructor'] = { fg = '05' },
+    ['@conditional'] = { link = 'Conditional' },
+    ['@number'] = { link = 'Number' },
+    ['@operator'] = { fg = '05', },
+    ['@parameter'] = { fg = '05', },
+    ['@parameter.reference'] = { fg = '05' },
+    ['@property'] = { fg = '05' },
+    ['@field'] = { fg = '05' },
+    ['@punctuation.delimiter'] = { fg = '05' },
     ['@punctuation.delimiter.markdown'] = { link = 'Delimiter' },
-    ['@punctuation.bracket'] = { link = 'TSPunctBracket' },
-    ['@punctuation.special'] = { link = 'TSPunctSpecial' },
-    ['@repeat'] = { link = 'TSRepeat' },
-    ['@string'] = { link = 'TSString' },
-    ['@string.special.url'] = { link = 'TSString' },
+    ['@punctuation.bracket'] = { fg = '0D' },
+    ['@punctuation.special'] = { fg = '05' },
+    ['@repeat'] = { fg = '0A' },
+    ['@string'] = { link = 'String' },
+    ['@string.special.url'] = { link = 'String' },
     -- ["@spell"] = {link = "Underlined"},
-    ['@type'] = { link = 'TSType' },
+    ['@type'] = { fg = '05' },
     ['@text.todo'] = { link = 'Normal' },
-    ['@type.builtin'] = { link = 'TSTypeBuiltin' },
-    ['@variable'] = { link = 'TSVariable' },
-    ['@variable.builtin'] = { link = 'TSVariableBuiltin' },
-    ['@float'] = { link = 'TSFloat' },
-    ['@keyword'] = { link = 'TSKeyword' },
+    ['@type.builtin'] = { fg = '05' },
+    ['@variable'] = { fg = '05' },
+    ['@variable.builtin'] =  { fg = '0A' },
+    ['@float'] = { fg = '09' },
+    ['@keyword'] = { fg = '0A' },
     ['@keyword.conditional'] = { link = 'Conditional' },
     ['@keyword.conditional.tsx'] = { link = 'Conditional' },
-    ['@keyword.operator'] = { link = 'TSKeywordOperator' },
-    ['@keyword.function'] = { link = 'TSKeywordFunction' },
-    ['@keyword.return'] = { link = 'TSKeywordReturn' },
+    ['@keyword.operator'] = { fg = '0F' },
+    ['@keyword.function'] = { fg = '0E' },
+    ['@keyword.return'] =  { fg = '08', attr = 'bold' },
     ['@markup.strikethrough'] = { link = 'Conceal' },
-    ['@method'] = { link = 'TSMethod' },
-    ['@namespace'] = { link = 'TSNamespace' },
-    ['@exception'] = { link = 'TSException' },
-    ['@include'] = { link = 'TSInclude' },
+    ['@method'] = { fg = '05' },
+    ['@namespace'] =  { fg = '05' },
+    ['@exception'] = { fg = '0C' },
+    ['@include'] = { fg = '0E' },
     ['@text.title'] = { link = 'Title' },
     ['@text.literal'] = { link = 'String' },
     ['@text.strong'] = { link = 'Bold' },
@@ -851,13 +749,13 @@ local groups = {
     ['@text.emphasis'] = { link = 'Italic' },
     ['@text.uri'] = { link = 'String' },
     ['@text.reference'] = { fg = '08' },
-    ['@tag'] = { link = 'TSTag' },
-    ['@tag.builtin'] = { link = 'TSTag' },
-    ['@tag.custom'] = { link = 'TSTagCustom' },
-    ['@tag.delimiter'] = { link = 'TSTagDelimiter' },
-    ['@tag.attribute'] = { link = 'TSTagAttribute' },
-    ['@statement'] = { link = 'TSStatement' },
-    ['@error'] = { link = 'TSError' },
+    ['@tag'] = { fg = '0D' },
+    ['@tag.builtin'] = { link = '@tag' },
+    ['@tag.custom'] = { fg = '0D' },
+    ['@tag.delimiter'] = { fg = '0D' },
+    ['@tag.attribute'] = { fg = '0A' },
+    ['@statement'] = { fg = '0A' },
+    ['@error'] = { fg = '08' },
     ['@label'] = { link = 'Normal' },
     ['@markup.heading'] = { link = 'Title' },
     ['@markup.italic'] = { link = 'Italic' },
