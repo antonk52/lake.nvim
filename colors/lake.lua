@@ -64,6 +64,7 @@ local groups = {
     Conceal = { fg = '0D', bg = '00' },
     Cursor = { fg = '00', bg = '05' },
     NonText = { fg = '03' },
+    Whitespace = { fg = '02' },
     LineNr = { fg = '03', bg = '01' },
     SignColumn = { fg = '03', bg = '01' },
     StatusLine = { fg = '04', bg = '02' },
