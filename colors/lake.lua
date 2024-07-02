@@ -184,7 +184,7 @@ local groups = {
     ['@markup.link'] = { link = 'Normal' },
     ['@markup.link.label'] = { fg = '08' },
     ['@markup.link.url'] = { link = 'String' },
-    ['@markup.list'] = { link = 'Normal' },
+    ['@markup.list'] = { fg = '05' },
     ['@markup.quote'] = { link = '@text.quote' },
     ['@markup.raw'] = { link = 'String' },
     ['@markup.raw.block'] = { link = 'Normal' },
