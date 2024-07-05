@@ -1,24 +1,4 @@
-local t = require('lake').theme
-local theme = {
-    ['00'] = { ['gui'] = t.color00, ['cterm'] = 234, ['name'] = 'Gray' },
-    ['01'] = { ['gui'] = t.color01, ['cterm'] = 236, ['name'] = 'Gray' },
-    ['02'] = { ['gui'] = t.color02, ['cterm'] = 238, ['name'] = 'DarkGray' },
-    ['03'] = { ['gui'] = t.color03, ['cterm'] = 242, ['name'] = 'DarkGray' },
-    ['04'] = { ['gui'] = t.color04, ['cterm'] = 246, ['name'] = 'LightGray' },
-    ['05'] = { ['gui'] = t.color05, ['cterm'] = 248, ['name'] = 'LightGray' },
-    ['06'] = { ['gui'] = t.color06, ['cterm'] = 250, ['name'] = 'White' },
-    ['07'] = { ['gui'] = t.color07, ['cterm'] = 254, ['name'] = 'White' },
-    ['08'] = { ['gui'] = t.color08, ['cterm'] = 1, ['name'] = 'Red' },
-    ['09'] = { ['gui'] = t.color09, ['cterm'] = 136, ['name'] = 'Orange' },
-    ['0A'] = { ['gui'] = t.color0A, ['cterm'] = 3, ['name'] = 'Yellow' },
-    ['0B'] = { ['gui'] = t.color0B, ['cterm'] = 144, ['name'] = 'LightGreen' },
-    ['0C'] = { ['gui'] = t.color0C, ['cterm'] = 3, ['name'] = 'LightBlue' },
-    ['0D'] = { ['gui'] = t.color0D, ['cterm'] = 12, ['name'] = 'Blue' },
-    ['0E'] = { ['gui'] = t.color0E, ['cterm'] = 13, ['name'] = 'Violet' },
-    ['0F'] = { ['gui'] = t.color0F, ['cterm'] = 130, ['name'] = 'Orange' },
-}
-
-vim.g.lake_palette = theme
+local theme = require('lake').get_theme()
 
 if vim.fn.has('nvim-0.7.0') ~= 1 then
     vim.notify_once('lake requires neovim v0.7 or newer')

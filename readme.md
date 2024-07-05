@@ -14,7 +14,11 @@ require('lazy').setup({
 
     'antonk52/lake.nvim'
     config = function()
-      vim.cmd('color lake')
+      vim.cmd.color('lake')
+
+      -- Alternatively enable contrast version with
+      require('lake').set_theme_name('contrast')
+      vim.cmd.color('lake')
     end,
   }
 })
