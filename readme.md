@@ -4,7 +4,7 @@ A simplified version of the ocean color scheme with [treesitter](https://github.
 
 <img alt="lake.nvim colorscheme" src="https://user-images.githubusercontent.com/5817809/124399388-ca25c980-dd23-11eb-8ede-361bcb5415db.png">
 
-Palette colors can be accessed via `require('lake').theme` in lua or via `vim.g.lake_palette` in viml
+Palette colors can be accessed via `require('lake').theme`
 
 ## Install
 
@@ -17,8 +17,7 @@ require('lazy').setup({
       vim.cmd.color('lake')
 
       -- Alternatively enable contrast version with
-      require('lake').set_theme_name('contrast')
-      vim.cmd.color('lake')
+      vim.cmd.color('lake_contrast')
     end,
   }
 })

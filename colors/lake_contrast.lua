@@ -7,7 +7,7 @@ if vim.g.colors_name then
     vim.cmd('hi clear')
 end
 
-vim.g.colors_name = 'lake'
+vim.g.colors_name = 'lake_contrast'
 
 local lake = require('lake')
-lake.apply_highlights(lake.colors_default)
+lake.apply_highlights(lake.colors_contrast)
