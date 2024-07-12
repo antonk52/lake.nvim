@@ -137,7 +137,7 @@ local groups = {
     DiffRemoved = { fg = '08', bg = '00' },
 
     Boolean = { fg = '09' },
-    Character = { fg = '08' },
+    Character = { fg = '05' },
     Comment = { fg = '03' },
     Conditional = { fg = '0E' },
     Constant = { fg = '05' },
