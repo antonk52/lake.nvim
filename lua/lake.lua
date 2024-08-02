@@ -206,6 +206,8 @@ local groups = {
     ['@markup.strong'] = { link = 'Bold' },
 }
 
+local set_hl = vim.api.nvim_set_hl
+
 function M.apply_highlights(colors)
     for group, opts in pairs(groups) do
         local param = vim.tbl_extend('force', {}, opts)
@@ -215,7 +217,7 @@ function M.apply_highlights(colors)
         if opts.bg then
             param.bg = colors[opts.bg]
         end
-        vim.api.nvim_set_hl(0, group, param)
+        set_hl(0, group, param)
     end
 end
 
