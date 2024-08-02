@@ -1,29 +1,29 @@
-local t = require('lake').theme
+local t = require('lake').colors_default
 
 return {
     inactive = {
-        a = { fg = t.color04, bg = t.color01 },
-        b = { fg = t.color04, bg = t.color01 },
-        c = { fg = t.color04, bg = t.color01 },
-        x = { fg = t.color04, bg = t.color01 },
-        y = { fg = t.color04, bg = t.color01 },
-        z = { fg = t.color04, bg = t.color01 },
+        a = { fg = t.c04, bg = t.c01 },
+        b = { fg = t.c04, bg = t.c01 },
+        c = { fg = t.c04, bg = t.c01 },
+        x = { fg = t.c04, bg = t.c01 },
+        y = { fg = t.c04, bg = t.c01 },
+        z = { fg = t.c04, bg = t.c01 },
     },
     normal = {
-        a = { fg = t.color00, bg = t.color0B, gui = 'bold' },
-        b = { fg = t.color04, bg = t.color01 },
-        c = { fg = t.color03, bg = t.color00 },
-        x = { fg = t.color04, bg = t.color00 },
-        y = { fg = t.color04, bg = t.color00 },
-        z = { fg = t.color04, bg = t.color00 },
+        a = { fg = t.c00, bg = t.c0B, gui = 'bold' },
+        b = { fg = t.c04, bg = t.c01 },
+        c = { fg = t.c03, bg = t.c00 },
+        x = { fg = t.c04, bg = t.c00 },
+        y = { fg = t.c04, bg = t.c00 },
+        z = { fg = t.c04, bg = t.c00 },
     },
     insert = {
-        a = { fg = t.color00, bg = t.color0D, gui = 'bold' },
+        a = { fg = t.c00, bg = t.c0D, gui = 'bold' },
     },
     replace = {
-        a = { fg = t.color00, bg = t.color08 },
+        a = { fg = t.c00, bg = t.c08 },
     },
     visual = {
-        a = { fg = t.color00, bg = t.color0E, gui = 'bold' },
+        a = { fg = t.c00, bg = t.c0E, gui = 'bold' },
     },
 }
