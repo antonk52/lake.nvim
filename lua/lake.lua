@@ -140,9 +140,9 @@ local groups = {
     Typedef = { fg = 'c0A' },
 
     -- AI Suggestions
-    AISuggestion = { fg = 'c02' },
-    CopilotAnnotation = { fg = 'c02' },
-    CopilotSuggestion = { fg = 'c02' },
+    AISuggestion = { link = 'c03', italic = true },
+    CopilotAnnotation = { fg = 'c03', italic = true },
+    CopilotSuggestion = { fg = 'c03' , italic = true },
 
     -- Treesitter 0.8 or newer
     ['@function'] = { fg = 'c05' },
