@@ -140,7 +140,7 @@ local groups = {
     Typedef = { fg = 'c0A' },
 
     -- AI Suggestions
-    AISuggestion = { link = 'c03', italic = true },
+    AISuggestion = { fg = 'c03', italic = true },
     CopilotAnnotation = { fg = 'c03', italic = true },
     CopilotSuggestion = { fg = 'c03' , italic = true },
 
