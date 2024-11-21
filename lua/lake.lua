@@ -81,7 +81,7 @@ local groups = {
     Whitespace = { fg = 'c02' },
     LineNr = { fg = 'c03', bg = 'c01' },
     SignColumn = { fg = 'c03', bg = 'c01' },
-    StatusLine = { fg = 'c04', bg = 'c02' },
+    StatusLine = { fg = 'c04' },
     StatusLineNC = { fg = 'c03', bg = 'c01' },
     VertSplit = { fg = 'c02', bg = 'c02' },
     ColorColumn = { bg = 'c01' },
