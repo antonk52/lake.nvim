@@ -101,6 +101,10 @@ local groups = {
     DiagnosticError = { fg = 'c08' },
     DiagnosticOk = { fg = 'c0B' },
 
+    Added = { fg = 'c0B' },
+    Removed = { fg = 'c08' },
+    Changed = { fg = 'c0D' },
+
     DiffAdd = { fg = 'c0B', bg = 'c01' },
     DiffChange = { fg = 'c03', bg = 'c01' },
     DiffDelete = { fg = 'c08', bg = 'c01' },
@@ -110,6 +114,10 @@ local groups = {
     DiffNewFile = { fg = 'c0B', bg = 'c00' },
     DiffLine = { fg = 'c0D', bg = 'c00' },
     DiffRemoved = { fg = 'c08', bg = 'c00' },
+
+    MiniDiffSignAdd = { fg = 'c0B', bg = 'c01' },
+    MiniDiffSignChange = { fg = 'c0D', bg = 'c01' },
+    MiniDiffSignDelete = { fg = 'c08', bg = 'c01' },
 
     Boolean = { fg = 'c09' },
     Character = { fg = 'c05' },
